@@ -94,6 +94,20 @@
     .beta{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:14px}
     .beta strong{color:#9a3412}
 
+    /* BLOCO RETRÁTIL: “Mapa de estrutura para esse texto” */
+    details.map{border:1px solid #dbeafe;background:#f8fbff;border-radius:14px;overflow:hidden;margin:14px 0}
+    details.map summary{
+      list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+      padding:14px 16px;background:#eef6ff;font-weight:700;color:#0b3b66;user-select:none
+    }
+    details.map summary::-webkit-details-marker{display:none}
+    .chev{width:18px;height:18px;flex:none;transition:transform .2s ease;opacity:.8}
+    details.map[open] .chev{transform:rotate(90deg)}
+    .map-inner{padding:14px 16px}
+    .map-grid{display:grid;gap:12px}
+    .map-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .tag{display:inline-block;border:1px solid #cfe3f7;background:#fff;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px}
+
     /* aviso de licença na impressão */
     .print-license{position:fixed;bottom:8mm;right:10mm;font-size:10px;color:#64748b}
     @media screen{.print-license{display:none}}
@@ -103,7 +117,7 @@
     @media print{
       .page{max-width:100%;margin:0;padding:0;border:0;box-shadow:none}
       .printbar{display:none}
-      .card,.bridge,.panel,.step{break-inside:avoid}
+      .card,.bridge,.panel,.step,details.map{break-inside:avoid}
       h1,h2{break-after:avoid}
       a{color:inherit;text-decoration:none}
     }
@@ -429,25 +443,20 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       <div class="beta" style="margin-top:12px">
         <p><strong>Avaliação (BETA):</strong> Sua redação pode ser avaliada por esse chatpt com conversa já treinada para avaliação. Boa preparação. <br>
         <em>Fase beta de projeto</em> — disponibilizei free para testar ao público geral.</p>
-        <!-- Troque o # pelo link real do avaliador quando você tiver -->
         <p><a class="btn" href="https://chatgpt.com/g/g-TjHOqVCkC-sofia-corretora-do-profinho-enem-v1-2" target="_blank" rel="noopener">Abrir avaliador (beta)</a></p>
       </div>
-      
-          <!-- =========================================================
-     SUBTÓPICO • EXEMPLO GERADO POR IA (FIM DA PÁGINA)
-     Cole este bloco logo acima do rodapé (antes do </footer>)
-========================================================= -->
-<h3 id="exemplo-ia">SOMENTE PARA FINS DE ENTENDIMENTO DA APLICAÇÃO</h3>
 
-<div class="card" style="background:#fffbeb;border-color:#fde68a">
-  <p><strong>Aqui está um texto feito com ChatGPT</strong>; baseado somente no conteúdo desta página.</p>
-  <p><strong>*ATENÇÃO:* TEXTO GENÉRICO E SÓ COM FINALIDADE DE TESTE. DESENVOLVIDO COM IA; PODE CONTER ERROS E TOM ROBOTIZADO.</strong></p>
-  <p class="small muted">
-    Limite de linhas da redação: 30. 
-    Linhas do exemplo: <b><span id="linhas-total">–</span>/30</b> (incluindo vazias) • 
-    <b><span id="linhas-sem-vazias">–</span>/30</b> (desconsiderando vazias).
-  </p>
-</div>
+      <!-- EXEMPLO GERADO POR IA -->
+      <h3 id="exemplo-ia" style="margin-top:24px">SOMENTE PARA FINS DE ENTENDIMENTO DA APLICAÇÃO</h3>
+      <div class="card" style="background:#fffbeb;border-color:#fde68a">
+        <p><strong>Aqui está um texto feito com ChatGPT</strong>; baseado somente no conteúdo desta página.</p>
+        <p><strong>*ATENÇÃO:* TEXTO GENÉRICO E SÓ COM FINALIDADE DE TESTE. DESENVOLVIDO COM IA; PODE CONTER ERROS E TOM ROBOTIZADO.</strong></p>
+        <p class="small muted">
+          Limite de linhas da redação: 30.
+          Linhas do exemplo: <b><span id="linhas-total">–</span>/30</b> (incluindo vazias) •
+          <b><span id="linhas-sem-vazias">–</span>/30</b> (desconsiderando vazias).
+        </p>
+      </div>
 
 <pre id="exemplo-ia-texto"><code>Quando a chuva tem CEP
 
@@ -481,21 +490,77 @@ e cadastrar 90% das famílias nas listas de contato, com relatório público sem
 Assim, lei, orçamento e gente caminham juntos, e o direito ao ambiente equilibrado
 sai do papel.</code></pre>
 
-<p class="small"><em>*TEXTO RECEBE NOTA 100 EM AVALIADORES DE IA QUE OLHAM SOMENTE OS CRITÉRIOS DA CARTILHA*</em></p>
+      <!-- FRASE FIXA + BLOCO RETRÁTIL DO MAPA -->
+      <p class="small muted" style="margin:8px 0 6px">
+        (Veja como o texto usa cada parte do guia nesse mapa)
+      </p>
+      <details class="map" id="mapa-exemplo-ia">
+        <summary>
+          <svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M7 5l6 5-6 5V5z"/></svg>
+          Mapa de estrutura para esse texto
+        </summary>
+        <div class="map-inner">
+          <div class="card">
+            <h3>1) Título</h3>
+            <p><b>“Quando a chuva tem CEP”</b> — humaniza e fixa o <span class="tag">[RECORTE]</span> socioambiental (CF/88, art. 225).</p>
+          </div>
 
-<script>
-  (function () {
-    const el = document.getElementById('exemplo-ia-texto');
-    if (!el) return;
-    // remove newline final, se houver
-    const text = el.textContent.replace(/\s+$/,'');
-    const lines = text.split(/\r?\n/);
-    const nonEmpty = lines.filter(l => l.trim() !== '');
-    document.getElementById('linhas-total').textContent = lines.length;
-    document.getElementById('linhas-sem-vazias').textContent = nonEmpty.length;
-  })();
-</script>
-    </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <h3>2) Introdução (I1–I4)</h3>
+              <ul>
+                <li><b>I1:</b> CF/88 <b>art. 225</b> (direito ambiental) + ideia central.</li>
+                <li><b>I2:</b> cena real (“a chuva tem CEP”).</li>
+                <li><b>I3:</b> Tese binária: (A) fragilidade orçamentária (<b>art. 165</b>) + (B) mediações de risco frágeis.</li>
+                <li><b>I4:</b> Ponte para P2 (norma) e P3 (dado).</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>3) P2 — Plano institucional (UA-4)</h3>
+              <ul>
+                <li><b>Tópico:</b> “Em primeira análise…” — falha na <b>Lei 12.608/2012</b>.</li>
+                <li><b>Prova:</b> lei exige planos, rotas e simulados.</li>
+                <li><b>Explicação:</b> sem <b>LDO</b>/<b>LOA</b> (art. 165) vira ação episódica.</li>
+                <li><b>Fecho-ponte:</b> “Logo…” — chama o P3.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>4) P3 — Plano sociocultural (UA-4)</h3>
+              <ul>
+                <li><b>Tópico:</b> “Em segunda análise…”</li>
+                <li><b>Prova:</b> <b>CEMADEN 2024</b>: 3.620 alertas; 1.690 ocorrências.</li>
+                <li><b>Explicação:</b> informação não vira prática ⇒ risco se repete.</li>
+                <li><b>Fecho-ponte:</b> “Dessarte…” — prepara C5.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>5) C5 — Conclusão (5 peças)</h3>
+              <ul>
+                <li><b>QUEM:</b> Prefeitura/Defesa Civil + escolas/UBS/CRAS.</li>
+                <li><b>O QUÊ:</b> Plano de Contingência + Núcleos Escola–Defesa Civil.</li>
+                <li><b>COMO:</b> <b>Lei 12.608/2012</b>, alertas <b>CEMADEN</b>, <b>LDO</b>/<b>LOA</b> (art. 165).</li>
+                <li><b>PARA QUÊ:</b> reduzir perdas e efetivar o direito (art. 225).</li>
+                <li><b>DETALHE:</b> 100% rotas/12 meses; 2 simulados/ano; 90% famílias cadastradas.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>6) Referências do guia usadas</h3>
+            <ul>
+              <li><b>CF/88:</b> arts. <b>225</b> e <b>165</b>.</li>
+              <li><b>Lei 12.608/2012</b> (PNPDEC/Defesa Civil).</li>
+              <li><b>CEMADEN 2024</b> (alertas/ocorrências).</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>7) Variáveis preenchidas</h3>
+            <p><span class="tag">[RECORTE]</span> adaptação climática urbana • <span class="tag">[PÚBLICO]</span> periferias • <span class="tag">[NORMA]</span> Lei 12.608/2012 + CF/88 arts. 225/165 • <span class="tag">[BASE]</span> CEMADEN 2024 • <span class="tag">[IMPACTO]</span> exposição a desastres • <span class="tag">[PRAZO]</span> 12 meses.</p>
+          </div>
+        </div>
+      </details>
+    </div><!-- /train -->
 
     <p class="muted small" style="margin-top:16px">© v4.6 — Guia didático completo. Exporte: <span class="chip">Ctrl/Cmd + P</span> → “Salvar como PDF”.</p>
 
@@ -509,5 +574,21 @@ sai do papel.</code></pre>
       • Uso não comercial e sem obras derivadas. Cite a fonte.
     </footer>
   </div>
+
+  <!-- Scripts auxiliares -->
+  <script>
+    // Contador de linhas do exemplo IA
+    (function () {
+      const el = document.getElementById('exemplo-ia-texto');
+      if (!el) return;
+      const text = el.textContent.replace(/\s+$/,'');
+      const lines = text.split(/\r?\n/);
+      const nonEmpty = lines.filter(l => l.trim() !== '');
+      const a = document.getElementById('linhas-total');
+      const b = document.getElementById('linhas-sem-vazias');
+      if (a) a.textContent = lines.length;
+      if (b) b.textContent = nonEmpty.length;
+    })();
+  </script>
 </body>
 </html>
