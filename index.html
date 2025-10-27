@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Encoding e viewport primeiro -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Esqueleto Global — Redação ENEM 2025 (v4.3) • Introdução Autoral e Global</title>
 
+  <title>Esqueleto Global — Redação ENEM 2025 (v4.3) • Introdução Autoral e Global — PDF-Ready</title>
+
+  <!-- Licença e autoria (humanos + robôs) -->
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
   <meta name="license" content="CC BY-NC-ND 4.0">
   <meta name="author" content="Pedro Auharek">
-  
+  <meta name="copyright" content="© 2025 Pedro Auharek. Licensed under CC BY-NC-ND 4.0">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Esqueleto Global — Redação ENEM 2025 (v4.3)",
+    "creator": { "@type": "Person", "name": "Pedro Auharek" },
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "copyrightNotice": "© 2025 Pedro Auharek"
+  }
+  </script>
+
   <style>
     :root{--ink:#0f172a;--muted:#475569;--accent:#0ea5e9;--bg:#ffffff;--card:#f8fafc;--ok:#16a34a;--warn:#b45309;--err:#dc2626;--shadow:0 6px 24px rgba(2,6,23,.06),0 2px 8px rgba(2,6,23,.06)}
     *{box-sizing:border-box}
@@ -35,13 +51,39 @@
     .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#e2f2ff;color:#075985;margin-right:8px;font-weight:700}
     .toc a{color:var(--accent);text-decoration:none}
     .toc li{margin:4px 0}
-    @media print{.page{box-shadow:none;border:0;margin:0;padding:0;max-width:100%}}
+    .printbar{position:sticky;top:0;background:#fff;z-index:5;border:1px solid #e5e7eb;border-radius:12px;padding:8px 12px;margin:8px 0;display:flex;gap:10px;align-items:center}
+    .btn{appearance:none;border:0;border-radius:10px;background:#0ea5e9;color:#fff;padding:8px 12px;cursor:pointer;font-weight:700}
+    .btn:active{transform:translateY(1px)}
+    .pagebreak{break-before:page}
+    .site-footer{margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:13px;color:#475569}
+    .site-footer a{text-decoration:none}
+
+    /* PRINT */
+    @page{size:A4;margin:16mm 14mm 18mm 14mm}
+    @media print{
+      .page{max-width:100%;margin:0;padding:0;border:0;box-shadow:none}
+      .printbar{display:none}
+      .card{break-inside:avoid}
+      h1,h2{break-after:avoid}
+      .pagebreak{break-before:page}
+      a{color:inherit;text-decoration:none}
+    }
   </style>
+
+  <script>
+    function triggerPrint(){window.print()}
+  </script>
 </head>
 <body>
   <div class="page">
+    <div class="printbar">
+      <strong>PDF-Ready:</strong>
+      <button class="btn" onclick="triggerPrint()">Imprimir / Salvar em PDF</button>
+      <span class="small muted">Recomendado: A4 • Margens padrão • Escala 100% • Retrato</span>
+    </div>
+
     <h1>Esqueleto Global — ENEM <span class="muted">(v4.3 • 2025)</span></h1>
-    <p class="muted">Atualização focada na <strong>INTRODUÇÃO</strong>: versão mais criativa, autoral e humana, mantendo a estrutura global e as <strong>Referências Coringa</strong>. O restante (P2, P3 e Conclusão) segue o guia v4.2.</p>
+    <p class="muted">Foco na <strong>INTRODUÇÃO</strong> autoral e humana, mantendo o molde global e os cartões de <strong>Leis</strong> e <strong>Dados</strong> para P2/P3/C5. Versão otimizada para exportar em PDF.</p>
 
     <div class="card toc">
       <strong>Sumário</strong>
@@ -56,10 +98,10 @@
       </ol>
     </div>
 
-    <!-- INTRODUÇÃO -->
+    <!-- INTRODUÇÃO (COMPLETA) -->
     <h2 id="intro">1) Introdução — <span class="pill">autoral</span> <span class="pill">humana</span> <span class="pill">global</span></h2>
     <div class="card">
-      <p class="muted">Variáveis mínimas: <span class="chip">[RECORTE]</span> foco do problema; <span class="chip">[PÚBLICO]</span> grupo afetado; <span class="chip">[LOCAL]</span> (opcional). A abertura ancora o tema em <b>direito</b> e apresenta uma <b>tese binária</b> (institucional × sociocultural), já preparando a ponte para P2 e P3.</p>
+      <p class="muted">Variáveis mínimas: <span class="chip">[RECORTE]</span> (foco do problema), <span class="chip">[PÚBLICO]</span> (grupo afetado), <span class="chip">[LOCAL]</span> (opcional). Abertura ancora o tema em <b>direito</b> e apresenta <b>tese binária</b> (institucional × sociocultural), já preparando P2 e P3.</p>
 
       <h3>1.1 Bloco universal (I1 → I4) — cole e substitua</h3>
       <pre><code>I1 — Gancho aplicado (Norma + Conceito)
@@ -80,7 +122,7 @@ Sob tal prisma, examinam-se o plano institucional (A) à luz da norma aplicável
           <h4>Por que funciona?</h4>
           <ul>
             <li><b>C2</b>: base legal aplicada (arts. 6º e 165) em vez de repertório de bolso.</li>
-            <li><b>C3</b>: projeto claro (dois vetores A/B) sem saltos.</li>
+            <li><b>C3</b>: projeto claro (vetores A/B) sem saltos.</li>
             <li><b>C4</b>: conectivos menos genéricos ("na contramão", "sob tal prisma").</li>
             <li><b>Ponte</b>: convoca P2 (norma) e P3 (dado) sem repetir ideias.</li>
           </ul>
@@ -88,7 +130,7 @@ Sob tal prisma, examinam-se o plano institucional (A) à luz da norma aplicável
         <div class="card">
           <h4>Como personalizar sem perder a globalidade</h4>
           <ul>
-            <li><b>[RECORTE]</b>: troque o substantivo amplo por situação real (ex.: "letramento midiático escolar").</li>
+            <li><b>[RECORTE]</b>: troque o abstrato por situação real (ex.: "letramento midiático escolar").</li>
             <li><b>[PÚBLICO]</b>: especifique grupo (ex.: "estudantes da rede pública").</li>
             <li><b>[LOCAL]</b>: use se souber (ex.: "em bairros de encosta de [cidade]").</li>
           </ul>
@@ -101,8 +143,8 @@ Sob tal prisma, examinam-se o plano institucional (A) à luz da norma aplicável
           <h4>Direitos sociais (CF/88 art. 6º) + Orçamento (art. 165)</h4>
           <p><b>I1</b> “À luz do art. 6º da Constituição, causa estranhamento que <span class="chip">[RECORTE]</span> alcance <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>, como se a promessa de proteção social fosse apenas retórica.”</p>
           <p><b>I2</b> “A vida real cobra o que a Constituição garante.”</p>
-          <p><b>I3</b> “Sustenta-se que o impasse decorre (A) da distância entre planejamento e execução (art. 165: PPA-LDO-LOA) e (B) de mediações frágeis que dificultam o acesso.”</p>
-          <p><b>I4</b> “Examinam-se, portanto, as engrenagens institucionais e as práticas socioculturais que mantêm o problema.”</p>
+          <p><b>I3</b> “O impasse decorre (A) da distância entre planejamento e execução (art. 165: PPA-LDO-LOA) e (B) de mediações frágeis que dificultam o acesso.”</p>
+          <p><b>I4</b> “Examinam-se as engrenagens institucionais e as práticas socioculturais que mantêm o problema.”</p>
         </div>
         <div class="card">
           <h4>Educação (CF/88 art. 205 + LDB arts. 2º–3º)</h4>
@@ -163,6 +205,8 @@ Sob tal prisma, examinam-se o plano institucional (A) à luz da norma aplicável
       </div>
     </div>
 
+    <div class="pagebreak"></div>
+
     <!-- DESENVOLVIMENTO (LEMBRETE) -->
     <h2 id="dev">2) Desenvolvimento — lembrete do molde (mantido)</h2>
     <div class="grid grid-2">
@@ -182,7 +226,7 @@ Fecho: fortalecer mediações e acesso torna-se imperativo.</code></pre>
       </div>
     </div>
 
-    <!-- DADOS (igual v4.2) -->
+    <!-- DADOS (cartões) -->
     <h2 id="dados">3) Cartões de Dados — prontos</h2>
     <div class="grid grid-2 small">
       <div class="card">
@@ -207,7 +251,7 @@ Fecho: fortalecer mediações e acesso torna-se imperativo.</code></pre>
       </div>
     </div>
 
-    <!-- LEIS (igual v4.2) -->
+    <!-- LEIS (cartões) -->
     <h2 id="leis">4) Cartões de Leis — prontos</h2>
     <div class="grid grid-3 small">
       <div class="card">
@@ -236,7 +280,7 @@ Fecho: fortalecer mediações e acesso torna-se imperativo.</code></pre>
       </div>
     </div>
 
-    <!-- CONCLUSÃO (igual v4.2) -->
+    <!-- CONCLUSÃO -->
     <h2 id="c5">5) Conclusão — as 5 peças explicadas</h2>
     <div class="card small">
       <ol>
@@ -300,14 +344,20 @@ Medida 2 — QUEM: Escola/UBS/CRAS. O QUÊ: mediação/acolhimento. COMO: LDB/8.
       </div>
     </div>
 
-    <p class="muted small">© v4.3 — Introdução reformulada com base no nosso banco (padrões de notas 1000, conectivos premium e macrotendências 2024–2025). Para imprimir em PDF: <span class="k">Ctrl/Cmd</span>+<span class="k">P</span>.</p>
+    <p class="muted small">© v4.3 — Introdução reformulada com base no nosso banco (padrões de notas 1000, conectivos premium e macrotendências 2024–2025). Exporte: <span class="k">Ctrl/Cmd</span>+<span class="k">P</span> → Destino “Salvar como PDF”.</p>
+
+    <!--
+      Licença: CC BY-NC-ND 4.0
+      Você pode compartilhar com crédito, mas NÃO pode usar comercialmente e NÃO pode fazer obras derivadas.
+      Texto da licença: https://creativecommons.org/licenses/by-nc-nd/4.0/
+    -->
+    <footer class="site-footer">
+      © 2025 Pedro Auharek • Licença:
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">
+        CC BY-NC-ND 4.0
+      </a>
+      • Uso não comercial e sem obras derivadas. Cite a fonte.
+    </footer>
   </div>
-  <footer class="small muted" style="margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb">
-  © 2025 Pedro Auharek • Licença:
-  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
-    CC BY-NC-ND 4.0
-  </a>
-  • Uso não comercial e sem obras derivadas. Cite a fonte.
-</footer>
 </body>
 </html>
