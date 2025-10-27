@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Encoding e viewport primeiro -->
+  <!-- Encoding e viewport -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Esqueleto Global — Redação ENEM 2025 (v4.3) • Introdução Autoral e Global — PDF-Ready</title>
+  <title>Esqueleto Global — Redação ENEM 2025 (v4.6) • Guia Didático Completo + Glossário — PDF-Ready</title>
 
-  <!-- Licença e autoria (humanos + robôs) -->
+  <!-- Direitos autorais -->
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
   <meta name="license" content="CC BY-NC-ND 4.0">
   <meta name="author" content="Pedro Auharek">
   <meta name="copyright" content="© 2025 Pedro Auharek. Licensed under CC BY-NC-ND 4.0">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Social (Open Graph / Twitter) -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Esqueleto Global — Redação ENEM 2025 (v4.6) • Guia Didático Completo + Glossário">
+  <meta property="og:description" content="Guia completo: introdução autoral, P2/P3 paralelos, C5 compacta, cartões de Leis e Dados, conectivos e glossário. PDF-Ready.">
+  <meta name="twitter:card" content="summary">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "Esqueleto Global — Redação ENEM 2025 (v4.3)",
+    "name": "Esqueleto Global — Redação ENEM 2025 (v4.6)",
     "creator": { "@type": "Person", "name": "Pedro Auharek" },
     "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
     "copyrightNotice": "© 2025 Pedro Auharek"
@@ -35,6 +43,7 @@
     h3{font-size:18px;margin:22px 0 8px}
     h4{font-size:15px;margin:16px 0 6px;color:var(--muted)}
     p{margin:8px 0}
+    ul{margin:6px 0 6px 18px}
     .muted{color:var(--muted)}
     .card{background:var(--card);border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0}
     .grid{display:grid;gap:14px}
@@ -47,16 +56,23 @@
     .k{background:#eef2ff;color:#1e3a8a;padding:0 6px;border-radius:6px;border:1px solid #dbeafe}
     .emph{background:#fffbeb;border:1px solid #fde68a;padding:10px;border-radius:12px}
     .chip{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;margin:2px 6px;font-size:12px;color:#0f172a}
-    .ok{color:var(--ok)} .warn{color:var(--warn)} .err{color:var(--err)}
     .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#e2f2ff;color:#075985;margin-right:8px;font-weight:700}
+    .site-footer{margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:13px;color:#475569}
+    .site-footer a{text-decoration:none}
     .toc a{color:var(--accent);text-decoration:none}
     .toc li{margin:4px 0}
     .printbar{position:sticky;top:0;background:#fff;z-index:5;border:1px solid #e5e7eb;border-radius:12px;padding:8px 12px;margin:8px 0;display:flex;gap:10px;align-items:center}
     .btn{appearance:none;border:0;border-radius:10px;background:#0ea5e9;color:#fff;padding:8px 12px;cursor:pointer;font-weight:700}
     .btn:active{transform:translateY(1px)}
     .pagebreak{break-before:page}
-    .site-footer{margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:13px;color:#475569}
-    .site-footer a{text-decoration:none}
+
+    /* badge simples de licença no topo */
+    .license-top{font-size:13px;color:#475569;margin:4px 0 0}
+    .license-top a{text-decoration:none}
+
+    /* aviso de licença para impressão (aparece em todas as páginas do PDF) */
+    .print-license{position:fixed;bottom:8mm;right:10mm;font-size:10px;color:#64748b}
+    @media screen{.print-license{display:none}}
 
     /* PRINT */
     @page{size:A4;margin:16mm 14mm 18mm 14mm}
@@ -76,183 +92,243 @@
 </head>
 <body>
   <div class="page">
-    <div class="printbar">
+    <div class="printbar" role="region" aria-label="Barra de impressão">
       <strong>PDF-Ready:</strong>
       <button class="btn" onclick="triggerPrint()">Imprimir / Salvar em PDF</button>
-      <span class="small muted">Recomendado: A4 • Margens padrão • Escala 100% • Retrato</span>
+      <span class="small muted">A4 • Margens padrão • Escala 100% • Retrato</span>
     </div>
 
-    <h1>Esqueleto Global — ENEM <span class="muted">(v4.3 • 2025)</span></h1>
-    <p class="muted">Foco na <strong>INTRODUÇÃO</strong> autoral e humana, mantendo o molde global e os cartões de <strong>Leis</strong> e <strong>Dados</strong> para P2/P3/C5. Versão otimizada para exportar em PDF.</p>
+    <h1>Esqueleto Global — ENEM <span class="muted">(v4.6 • 2025)</span></h1>
+    <p class="license-top">Licença:
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
+      — uso não comercial e sem obras derivadas. Cite a fonte.
+    </p>
+    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário explicando cada variável e sigla</b>. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
 
     <div class="card toc">
       <strong>Sumário</strong>
       <ol>
-        <li><a href="#intro">Introdução — versão autoral e global</a></li>
-        <li><a href="#dev">Desenvolvimento (P2/P3) — lembrete do molde</a></li>
-        <li><a href="#dados">Cartões de Dados (P3) — prontos</a></li>
-        <li><a href="#leis">Cartões de Leis (Intro/P2) — prontos</a></li>
-        <li><a href="#c5">Conclusão (C5) — 5 peças explicadas</a></li>
-        <li><a href="#conn">Conectivos criativos — rotação</a></li>
+        <li><a href="#como-usar">Como usar este guia + Regras de ouro</a></li>
+        <li><a href="#intro">Introdução — autoral, humana e global</a></li>
+        <li><a href="#dev">Desenvolvimento — P2/P3 com paralelismo (UA-4+)</a></li>
+        <li><a href="#c5">Conclusão — C5 compacta (duas medidas)</a></li>
+        <li><a href="#dados">Cartões de Dados — PNAD • SAEB/IDEB • CEMADEN • PRODES</a></li>
+        <li><a href="#leis">Cartões de Leis — CF/88 • LDB • SUS • PNPDEC • ECA • RAPS • CNJ</a></li>
+        <li><a href="#conn">Conectivos humanos — rotação anti-genérica</a></li>
         <li><a href="#check">Checklist final — 30 linhas</a></li>
+        <li><a href="#glossario">Glossário — o que é [cada variável] e o que significam P2, P3, C5, UA-4</a></li>
+        <li><a href="#pontes">Biblioteca de pontes — frases de engate P2→P3 e P3→C5</a></li>
       </ol>
     </div>
 
-    <!-- INTRODUÇÃO (COMPLETA) -->
+    <!-- 0) COMO USAR -->
+    <h2 id="como-usar">0) Como usar este guia (passo a passo rápido)</h2>
+    <div class="card">
+      <ol>
+        <li>Preencha <span class="chip">[RECORTE]</span>, <span class="chip">[PÚBLICO]</span> e, se souber, <span class="chip">[LOCAL]</span> na <b>Introdução</b>.</li>
+        <li>Escolha 1 <span class="chip">[NORMA]</span> (seção 5) para o <b>P2</b>.</li>
+        <li>Escolha 1 <span class="chip">[BASE]</span> (seção 4) para o <b>P3</b> e defina <span class="chip">[IMPACTO]</span>.</li>
+        <li>Mantenha o <b>paralelismo</b>: “Em primeira análise…” (P2) / “Em segunda análise…” (P3).</li>
+        <li>Na <b>Conclusão</b>, use as duas medidas paralelas com a <span class="chip">[NORMA]</span> do P2 e preencha <span class="chip">[INDICADOR]</span> e <span class="chip">[PRAZO]</span>.</li>
+      </ol>
+      <p class="muted small"><b>Regras de ouro:</b> (1) Cada parágrafo cumpre uma função. (2) Conectivos variados. (3) Indicador + prazo na C5. (4) Linguagem clara, sem jargão.</p>
+    </div>
+
+    <!-- 1) INTRODUÇÃO (v4.3) -->
     <h2 id="intro">1) Introdução — <span class="pill">autoral</span> <span class="pill">humana</span> <span class="pill">global</span></h2>
     <div class="card">
-      <p class="muted">Variáveis mínimas: <span class="chip">[RECORTE]</span> (foco do problema), <span class="chip">[PÚBLICO]</span> (grupo afetado), <span class="chip">[LOCAL]</span> (opcional). Abertura ancora o tema em <b>direito</b> e apresenta <b>tese binária</b> (institucional × sociocultural), já preparando P2 e P3.</p>
+      <p class="muted">Variáveis mínimas: <span class="chip">[RECORTE]</span> (foco), <span class="chip">[PÚBLICO]</span> (grupo), <span class="chip">[LOCAL]</span> (opcional). Âncora jurídica + tese binária (A institucional • B sociocultural) + ponte para P2/P3.</p>
 
       <h3>1.1 Bloco universal (I1 → I4) — cole e substitua</h3>
-      <pre><code>I1 — Gancho aplicado (Norma + Conceito)
+      <pre><code>I1 — Gancho (Norma + Conceito)
 À luz da CF/88 (art. 6º) e da cidadania social (T. H. Marshall), é inquietante que [RECORTE] persista entre [PÚBLICO] [LOCAL],
 na contramão do compromisso estatal com direitos sociais.
 
 I2 — Contexto vivo (1 linha)
 No cotidiano, o acesso ao direito se fragmenta entre filas, desinformação e soluções episódicas.
 
-I3 — Tese binária (criativa e objetiva)
+I3 — Tese binária (objetiva)
 Defende-se que o quadro se sustenta (A) por falhas de planejamento e orçamento — CF/88, art. 165 (PPA-LDO-LOA) — e (B) por mediações culturais/informacionais frágeis que mantêm barreiras para [PÚBLICO].
 
 I4 — Roteiro/ponte
-Sob tal prisma, examinam-se o plano institucional (A) à luz da norma aplicável e o plano sociocultural (B) com base em dados oficiais recentes, a fim de fundamentar medidas exequíveis.</code></pre>
+Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano sociocultural (B) com base em dados oficiais recentes, para orientar medidas exequíveis.</code></pre>
 
       <div class="grid grid-2 small">
         <div class="card">
           <h4>Por que funciona?</h4>
           <ul>
-            <li><b>C2</b>: base legal aplicada (arts. 6º e 165) em vez de repertório de bolso.</li>
-            <li><b>C3</b>: projeto claro (vetores A/B) sem saltos.</li>
-            <li><b>C4</b>: conectivos menos genéricos ("na contramão", "sob tal prisma").</li>
-            <li><b>Ponte</b>: convoca P2 (norma) e P3 (dado) sem repetir ideias.</li>
+            <li><b>C2</b>: lei aplicada (arts. 6º e 165) — sem repertório de bolso.</li>
+            <li><b>C3</b>: projeto claro (A/B) e sem saltos.</li>
+            <li><b>C4</b>: conectivos humanos ("na contramão", "sob tal prisma").</li>
+            <li><b>Ponte</b>: chama P2 (norma) e P3 (dado) sem repetir ideias.</li>
           </ul>
         </div>
         <div class="card">
-          <h4>Como personalizar sem perder a globalidade</h4>
+          <h4>Personalização mínima</h4>
           <ul>
-            <li><b>[RECORTE]</b>: troque o abstrato por situação real (ex.: "letramento midiático escolar").</li>
-            <li><b>[PÚBLICO]</b>: especifique grupo (ex.: "estudantes da rede pública").</li>
-            <li><b>[LOCAL]</b>: use se souber (ex.: "em bairros de encosta de [cidade]").</li>
+            <li><b>[RECORTE]</b>: situação concreta (“letramento midiático escolar”).</li>
+            <li><b>[PÚBLICO]</b>: grupo real (“estudantes da rede pública”).</li>
+            <li><b>[LOCAL]</b>: se houver (“em bairros de encosta de [cidade]”).</li>
           </ul>
         </div>
       </div>
 
-      <h3>1.2 Cinco introduções-modelo por referência-âncora</h3>
+      <h3>1.2 Cinco introduções-modelo (por referência-âncora)</h3>
       <div class="grid grid-3 small">
         <div class="card">
-          <h4>Direitos sociais (CF/88 art. 6º) + Orçamento (art. 165)</h4>
-          <p><b>I1</b> “À luz do art. 6º da Constituição, causa estranhamento que <span class="chip">[RECORTE]</span> alcance <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>, como se a promessa de proteção social fosse apenas retórica.”</p>
+          <h4>Direitos sociais (art. 6º) + Orçamento (art. 165)</h4>
+          <p><b>I1</b> “À luz do art. 6º, causa estranhamento que <span class="chip">[RECORTE]</span> alcance <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.”</p>
           <p><b>I2</b> “A vida real cobra o que a Constituição garante.”</p>
-          <p><b>I3</b> “O impasse decorre (A) da distância entre planejamento e execução (art. 165: PPA-LDO-LOA) e (B) de mediações frágeis que dificultam o acesso.”</p>
-          <p><b>I4</b> “Examinam-se as engrenagens institucionais e as práticas socioculturais que mantêm o problema.”</p>
+          <p><b>I3</b> “O impasse decorre (A) da distância entre planejamento e execução (art. 165) e (B) de mediações frágeis.”</p>
+          <p><b>I4</b> “Examinam-se engrenagens institucionais e práticas socioculturais que mantêm o problema.”</p>
         </div>
         <div class="card">
-          <h4>Educação (CF/88 art. 205 + LDB arts. 2º–3º)</h4>
-          <p><b>I1</b> “Nos termos do art. 205 e da LDB (arts. 2º–3º), é paradoxal que <span class="chip">[RECORTE]</span> limite <span class="chip">[PÚBLICO]</span>, contrariando a formação para cidadania e trabalho.”</p>
+          <h4>Educação (art. 205 + LDB 2º–3º)</h4>
+          <p><b>I1</b> “Nos termos do art. 205 e da LDB, é paradoxal que <span class="chip">[RECORTE]</span> limite <span class="chip">[PÚBLICO]</span>.”</p>
           <p><b>I2</b> “Quando a escola não media o mundo, o mundo media a escola.”</p>
-          <p><b>I3</b> “O entrave nasce (A) da falta de metas e rubrica (PPA-LDO-LOA) e (B) de lacunas de letramento crítico.”</p>
-          <p><b>I4</b> “Serão examinados o desenho institucional e as mediações pedagógicas necessárias para reverter o quadro.”</p>
+          <p><b>I3</b> “Faltam metas e rubrica (PPA-LDO-LOA) e há lacunas de letramento.”</p>
+          <p><b>I4</b> “Serão examinados desenho institucional e mediações pedagógicas.”</p>
         </div>
         <div class="card">
-          <h4>Saúde (CF/88 art. 196 + Leis 8.080/90 e 8.142/90)</h4>
-          <p><b>I1</b> “Conforme o art. 196 e a Lei 8.080/90, surpreende que <span class="chip">[RECORTE]</span> ainda atinja <span class="chip">[PÚBLICO]</span>, como se integralidade e equidade fossem metas abstratas.”</p>
+          <h4>Saúde (art. 196 + Leis 8.080/90 e 8.142/90)</h4>
+          <p><b>I1</b> “Conforme o art. 196 e a Lei 8.080/90, surpreende que <span class="chip">[RECORTE]</span> ainda atinja <span class="chip">[PÚBLICO]</span>.”</p>
           <p><b>I2</b> “Quando a rede falha, o sofrimento vira burocracia.”</p>
-          <p><b>I3</b> “A persistência resulta (A) de lacunas de governança do SUS e controle social (Lei 8.142/90) e (B) de estigma/desinformação.”</p>
-          <p><b>I4</b> “Analisam-se o desenho da rede e as mediações de informação necessárias ao acesso efetivo.”</p>
+          <p><b>I3</b> “Há lacunas de governança do SUS/controle social e estigma.”</p>
+          <p><b>I4</b> “Analisa-se a rede e a informação necessária ao acesso.”</p>
         </div>
         <div class="card">
-          <h4>Socioambiental (CF/88 art. 225 + Lei 12.608/2012)</h4>
-          <p><b>I1</b> “À guisa do art. 225, é inadmissível que <span class="chip">[RECORTE]</span> siga penalizando <span class="chip">[PÚBLICO]</span>, enquanto a Lei 12.608/2012 manda prevenir riscos.”</p>
+          <h4>Socioambiental (art. 225 + Lei 12.608/2012)</h4>
+          <p><b>I1</b> “À guisa do art. 225, é inadmissível que <span class="chip">[RECORTE]</span> penalize <span class="chip">[PÚBLICO]</span>.”</p>
           <p><b>I2</b> “Sem planejamento, a chuva tem CEP.”</p>
-          <p><b>I3</b> “O cenário se explica (A) pela baixa incorporação da Defesa Civil ao orçamento e (B) por mediações comunitárias frágeis diante dos alertas.”</p>
-          <p><b>I4</b> “Mapear o risco e treinar a resposta, com base em dados oficiais, é o primeiro passo discutido a seguir.”</p>
+          <p><b>I3</b> “Baixa incorporação da Defesa Civil ao orçamento e mediações frágeis.”</p>
+          <p><b>I4</b> “Mapear risco e treinar resposta com dados oficiais.”</p>
         </div>
         <div class="card">
-          <h4>Cidadania documental (CNJ Prov. 199/2025 + art. 6º)</h4>
-          <p><b>I1</b> “Com o Provimento 199/2025, negar documentação básica é negar direitos: por isso preocupa que <span class="chip">[RECORTE]</span> aprisione <span class="chip">[PÚBLICO]</span>.”</p>
+          <h4>Cidadania documental (CNJ 199/2025 + art. 6º)</h4>
+          <p><b>I1</b> “Com o Prov. 199/2025, negar documentação básica é negar direitos: preocupa que <span class="chip">[RECORTE]</span> aprisione <span class="chip">[PÚBLICO]</span>.”</p>
           <p><b>I2</b> “Sem papel, não há porta.”</p>
-          <p><b>I3</b> “O problema decorre (A) de fluxos tímidos (CRAS-Cartório-Escola) e (B) de barreiras informacionais que naturalizam o sub-registro.”</p>
-          <p><b>I4</b> “Examinam-se as travas administrativas e culturais que sustentam a invisibilidade civil.”</p>
-        </div>
-      </div>
-
-      <h3>1.3 Micro-oficina: preencher sem soar “pronto”</h3>
-      <div class="grid grid-3 small">
-        <div class="card">
-          <h4>Dar carne ao [RECORTE]</h4>
-          <p>Troque o abstrato por cena real: “desinformação” → “letramento midiático insuficiente no ensino médio”.</p>
-        </div>
-        <div class="card">
-          <h4>Humanizar o [PÚBLICO]</h4>
-          <p>“brasileiros” → “estudantes da rede pública em bairros periféricos”.</p>
-        </div>
-        <div class="card">
-          <h4>Conectivos com personalidade</h4>
-          <p>À luz de; Em chave pública; Na contramão de; Sob tal prisma.</p>
-        </div>
-      </div>
-
-      <h3>1.4 Dois exemplos prontos</h3>
-      <div class="grid grid-2 small">
-        <div class="card">
-          <h4>Cultura digital (Educação)</h4>
-          <p>“Nos termos do art. 205 e da LDB (arts. 2º–3º), é incongruente que o <b>letramento midiático escolar</b> siga frágil entre <b>estudantes da rede pública</b>. O impasse se explica por (A) metas orçamentárias ausentes e (B) mediações pedagógicas precárias — aspectos analisados a seguir.”</p>
-        </div>
-        <div class="card">
-          <h4>Adaptação climática (Socioambiental)</h4>
-          <p>“À guisa do art. 225, preocupa que a <b>adaptação climática em encostas</b> avance lentamente para <b>famílias de baixa renda</b>. O quadro decorre (A) de planejamento desarticulado (Lei 12.608/2012) e (B) de comunicação de risco insuficiente — pontos que se examinam adiante.”</p>
+          <p><b>I3</b> “Fluxos CRAS-Cartório-Escola tímidos e barreiras informacionais.”</p>
+          <p><b>I4</b> “Examinam-se travas administrativas e culturais.”</p>
         </div>
       </div>
     </div>
 
     <div class="pagebreak"></div>
 
-    <!-- DESENVOLVIMENTO (LEMBRETE) -->
-    <h2 id="dev">2) Desenvolvimento — lembrete do molde (mantido)</h2>
-    <div class="grid grid-2">
-      <div class="card small">
-        <h3>P2 — Plano institucional (Norma + falha)</h3>
-        <pre><code>Tópico: gargalos institucionais mantêm [RECORTE] entre [PÚBLICO].
-Prova: CF/88 (art. 165) / LDB (arts. 2º–3º) / Lei 8.080/90 (art. 2º) / Lei 12.608/2012 / ECA (arts. 4º, 53–54) / Port. 3.088/2011 / Prov. 199/2025.
-Explicação: metas carecem de rubrica/execução; delivery não se sustenta.
-Fecho: prever orçamento e gestão articulada é condição.</code></pre>
+    <!-- 2) DESENVOLVIMENTO -->
+    <h2 id="dev">2) Desenvolvimento — P2/P3 com paralelismo (UA-4+)</h2>
+    <div class="card">
+      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> (seção 5) • <span class="chip">[BASE]</span> (seção 4) • <span class="chip">[IMPACTO]</span> • <span class="chip">[LOCAL]</span> (opcional).</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>2.1 P2 — Plano institucional (Norma → Falha → Ponte)</h3>
+          <pre><code>Tópico — <b>Em primeira análise</b>, [RECORTE] persiste entre [PÚBLICO] porque a aplicação de <b>[NORMA]</b> não vira entrega regular.
+Prova — <b>Conforme dispõe</b> <b>[NORMA]</b> (ex.: CF/88 art. 165; LDB arts. 2º–3º; Lei 8.080/90 art. 2º; Lei 12.608/2012; ECA arts. 4º, 53–54; Port. 3.088/2011; Prov. CNJ 199/2025), o poder público deve garantir [direito/serviço] com metas e rotinas.
+Explicação — <b>Não obstante</b>, sem meta na LDO e dotação na LOA (art. 165), a política vira ação episódica, <b>de modo que</b> [efeito].
+Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob tal prisma</b>, a vida cotidiana confirma a urgência.</code></pre>
+          <p class="small"><b>O que é P2?</b> É o <b>segundo parágrafo</b> do texto (primeiro do desenvolvimento). Função: mostrar a <b>causa institucional</b> do problema com base <b>legal</b> e explicar a <b>falha de execução</b>. Termine abrindo caminho para o P3.</p>
+          <p class="small"><b>Conectivos-chave:</b> Em primeira análise; Conforme dispõe; Não obstante; de modo que; Logo; sob tal prisma.</p>
+        </div>
+        <div class="card">
+          <h3>2.2 P3 — Plano sociocultural (Dado → Impacto → Ponte)</h3>
+          <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>.
+Prova — <b>Segundo</b> [BASE] (ex.: PNAD ago/2025; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
+Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete.
+Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
+          <p class="small"><b>O que é P3?</b> É o <b>terceiro parágrafo</b> (segundo do desenvolvimento). Função: comprovar a <b>face social</b> do problema com <b>dado oficial</b> recente e apontar o <b>impacto</b>. Feche chamando a ação (C5).</p>
+          <p class="small"><b>Conectivos-chave:</b> Em segunda análise; Segundo; Na medida em que; por conseguinte; Dessarte.</p>
+        </div>
       </div>
+
       <div class="card small">
-        <h3>P3 — Plano sociocultural (Dado + impacto)</h3>
-        <pre><code>Tópico: mediações frágeis mantêm [RECORTE] na rotina de [PÚBLICO].
-Prova: 1 dado pronto — PNAD (ago/2025) | SAEB/IDEB (2023) | CEMADEN (2024) | PRODES (2024).
-Explicação: direitos previstos, prática não realiza; impacto concreto.
-Fecho: fortalecer mediações e acesso torna-se imperativo.</code></pre>
+        <h4>2.3 UA-4 — Unidade Argumentativa em 4 passos</h4>
+        <p><b>UA-4</b> = <b>Tópico</b> → <b>Prova</b> → <b>Explicação</b> → <b>Fecho-ponte</b>. Mantém coesão e evita repetição.</p>
+      </div>
+
+      <div class="card small">
+        <h4>2.4 Estratégias de argumentação</h4>
+        <ul>
+          <li><b>Causal</b>: P2 explica a causa institucional; P3 mostra o efeito social.</li>
+          <li><b>Comparativa</b>: P3 contrasta períodos/territórios da mesma <span class="chip">[BASE]</span>.</li>
+          <li><b>Analógica</b>: metáfora curta (“sem rubrica, política é ônibus sem itinerário”).</li>
+        </ul>
+        <p><b>Paralelismo:</b> inícios iguais (“Em primeira/segunda análise”), meios iguais (“Conforme dispõe/Segundo”), fechos afins (“Logo/Dessarte”).</p>
       </div>
     </div>
 
-    <!-- DADOS (cartões) -->
-    <h2 id="dados">3) Cartões de Dados — prontos</h2>
+    <div class="pagebreak"></div>
+
+    <!-- 3) CONCLUSÃO -->
+    <h2 id="c5">3) Conclusão — C5 compacta (duas medidas)</h2>
+    <div class="card">
+      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> (mesma do P2) • <span class="chip">[INDICADOR]</span> • <span class="chip">[PRAZO]</span> • <span class="chip">[AMBIENTE/SETOR]</span> (ex.: escolas, UBS, bairros de risco).</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>3.1 Modelo Universal — preencher e colar</h3>
+          <pre><code>Síntese — <b>Diante do exposto</b>, a permanência de [RECORTE] entre [PÚBLICO] resulta de falhas de execução e mediações frágeis.
+
+Medida 1 — <b>QUEM</b>: Prefeitura/Secretaria (gestora). <b>O QUÊ</b>: incluir meta na LDO e dotação na LOA. <b>COMO</b>: aplicar <b>[NORMA]</b> + CF/88 art. 165 (PPA-LDO-LOA), com edital anual. <b>PARA QUÊ</b>: garantir entrega contínua. <b>DETALHE</b>: atingir [INDICADOR] em [PRAZO].
+
+Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>: rotina de mediação/acolhimento (rotas, letramento, busca ativa). <b>COMO</b>: operar a mesma <b>[NORMA]</b> com protocolos simples. <b>PARA QUÊ</b>: reduzir barreiras diárias. <b>DETALHE</b>: publicar monitoramento semestral.</code></pre>
+          <p class="small"><b>O que é C5?</b> É a <b>Competência 5</b> do ENEM (proposta de intervenção). Os cinco blocos obrigatórios são <b>QUEM</b>, <b>O QUÊ</b>, <b>COMO</b>, <b>PARA QUÊ</b>, <b>DETALHE</b>. Preencha todos, sem violar direitos humanos.</p>
+          <p class="small"><b>Conectivos-chave:</b> Diante do exposto; para tanto; a fim de; com isso; ao cabo.</p>
+        </div>
+        <div class="card">
+          <h3>3.2 Modelos temáticos (ajuste só as variáveis)</h3>
+          <p class="small"><b>Educação</b> — <i>[NORMA]</i>: CF/88 art. 205 + LDB arts. 2º–3º</p>
+          <pre><code>QUEM: Secretaria de Educação + escolas. O QUÊ: Núcleos de Letramento (mídia/ciência). COMO: [NORMA] + art. 165 com formação docente. PARA QUÊ: elevar proficiência e enfrentar [RECORTE]. DETALHE: subir [INDICADOR] até [PRAZO].</code></pre>
+          <p class="small"><b>Saúde/RAPS</b> — <i>[NORMA]</i>: Lei 8.080/90 + 8.142/90 + Port. 3.088/2011</p>
+          <pre><code>QUEM: Secretaria de Saúde + UBS + CAPS + CRAS. O QUÊ: linha de cuidado territorial para [PÚBLICO]. COMO: [NORMA] + rubrica na LOA. PARA QUÊ: reduzir [RECORTE]. DETALHE: queda de [INDICADOR] em [PRAZO].</code></pre>
+          <p class="small"><b>Socioambiental</b> — <i>[NORMA]</i>: CF/88 art. 225 + Lei 12.608/2012</p>
+          <pre><code>QUEM: Prefeitura/Defesa Civil + Educação/Obras. O QUÊ: Plano de Contingência com rotas/simulados. COMO: [NORMA] + alertas CEMADEN e mapas PRODES + art. 165. PARA QUÊ: reduzir impactos de [RECORTE]. DETALHE: atingir [INDICADOR] em [PRAZO].</code></pre>
+          <p class="small"><b>Documentação civil</b> — <i>[NORMA]</i>: Prov. CNJ 199/2025 + art. 6º</p>
+          <pre><code>QUEM: CRAS + Cartório + Escola. O QUÊ: mutirões “Registre-se!” com busca ativa. COMO: [NORMA] + meta na LDO/LOA. PARA QUÊ: ampliar acesso a direitos e emprego. DETALHE: emitir [INDICADOR] até [PRAZO].</code></pre>
+        </div>
+      </div>
+
+      <div class="card small">
+        <h4>3.3 Biblioteca de micro-peças (ajuda para preencher)</h4>
+        <ul>
+          <li><b>QUEM</b> (exemplos): Secretaria Municipal; Diretoria Regional; Escola X; UBS Y; CRAS Z; Defesa Civil; Cartório.</li>
+          <li><b>O QUÊ</b>: “criar Núcleo…”, “implantar rotina…”, “mapear e sinalizar…”.</li>
+          <li><b>COMO</b>: citar a <span class="chip">[NORMA]</span> + art. 165 (planejamento/orçamento) + “edital anual/convênio/protocolo”.</li>
+          <li><b>PARA QUÊ</b>: “reduzir evasão”, “diminuir perdas”, “ampliar acesso”.</li>
+          <li><b>DETALHE</b>: <span class="chip">[INDICADOR]</span> + <span class="chip">[PRAZO]</span> (ex.: “+15% proficiência até dez/2026”).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 4) DADOS -->
+    <h2 id="dados">4) Cartões de Dados — prontos para o P3</h2>
     <div class="grid grid-2 small">
       <div class="card">
         <h3>PNAD (ago/2025)</h3>
         <p><b>Dado:</b> desemprego 5,6%; subutilização 14,1%.</p>
-        <p><b>Como usar:</b> “Conforme o IBGE (ago/2025)… retroalimenta [RECORTE] entre [PÚBLICO].”</p>
+        <p><b>Como usar:</b> pressiona renda/tempo escolar/adesão a serviços; “Conforme o IBGE (ago/2025)…”.</p>
       </div>
       <div class="card">
         <h3>SAEB/IDEB (2023)</h3>
         <p><b>Dado:</b> 9º ano — LP 258,8; Mat 257,1; IDEB 6,0.</p>
-        <p><b>Como usar:</b> “Lacunas de letramento dificultam enfrentar [RECORTE].”</p>
+        <p><b>Como usar:</b> lacunas de letramento → vulnerabilidade informacional.</p>
       </div>
       <div class="card">
         <h3>CEMADEN (2024)</h3>
         <p><b>Dado:</b> 3.620 alertas; 1.690 ocorrências.</p>
-        <p><b>Como usar:</b> “Concentração em áreas vulneráveis agrava [RECORTE].”</p>
+        <p><b>Como usar:</b> concentração territorial de risco; educação para risco.</p>
       </div>
       <div class="card">
         <h3>PRODES (2024)</h3>
         <p><b>Dado:</b> Amazônia 6.288 km²; Cerrado 8.174 km².</p>
-        <p><b>Como usar:</b> “Exige gestão territorial para mitigar [RECORTE].”</p>
+        <p><b>Como usar:</b> pressão ambiental → serviços e abastecimento.</p>
       </div>
     </div>
 
-    <!-- LEIS (cartões) -->
-    <h2 id="leis">4) Cartões de Leis — prontos</h2>
+    <!-- 5) LEIS -->
+    <h2 id="leis">5) Cartões de Leis — prontos para P2/C5</h2>
     <div class="grid grid-3 small">
       <div class="card">
         <h3>CF/88 — arts. 6º e 165</h3>
@@ -280,82 +356,102 @@ Fecho: fortalecer mediações e acesso torna-se imperativo.</code></pre>
       </div>
     </div>
 
-    <!-- CONCLUSÃO -->
-    <h2 id="c5">5) Conclusão — as 5 peças explicadas</h2>
+    <!-- 6) CONECTIVOS -->
+    <h2 id="conn">6) Conectivos humanos — rotação curta</h2>
     <div class="card small">
-      <ol>
-        <li><b>QUEM</b> (agente) — órgão + parceiro; define responsabilidade.</li>
-        <li><b>O QUÊ</b> (ação) — serviço/política nomeada; evita vaguidão.</li>
-        <li><b>COMO</b> (mecanismo) — instrumento legal + orçamento (art. 165; LDB; 8.080/8.142; 12.608; Port. 3.088; Prov. 199).</li>
-        <li><b>PARA QUÊ</b> (efeito) — impacto social no problema.</li>
-        <li><b>DETALHE</b> (indicador + prazo) — mensura e permite controle.</li>
-      </ol>
-      <pre><code>Modelo-base
-Síntese — [RECORTE] entre [PÚBLICO] decorre de falhas de planejamento e mediações frágeis.
-Medida 1 — QUEM: Prefeitura/Secretaria. O QUÊ: metas em LOA/LDO (art. 165). COMO: editais/fluxos. PARA QUÊ: ampliar entrega do direito. DETALHE: [INDICADOR] em [PRAZO].
-Medida 2 — QUEM: Escola/UBS/CRAS. O QUÊ: mediação/acolhimento. COMO: LDB/8.080/Port. 3.088. PARA QUÊ: reduzir barreiras. DETALHE: monitoramento semestral.</code></pre>
+      <p><b>Abertura/ângulo:</b> À luz de; Em chave pública; Diante desse quadro; Sob tal prisma.</p>
+      <p><b>Norma/dado:</b> Conforme dispõe; Nos termos de; Segundo; À luz de.</p>
+      <p><b>Causa/explicação:</b> na medida em que; porquanto; dado que; uma vez que.</p>
+      <p><b>Contraste:</b> entretanto; contudo; não obstante; apesar disso.</p>
+      <p><b>Fecho/ponte:</b> logo; por conseguinte; dessarte; com isso; ao cabo.</p>
+      <p class="muted">Meta: 10–14 conectivos por texto; evite repetir o mesmo conectivo em frases seguidas.</p>
     </div>
 
-    <!-- CONECTIVOS -->
-    <h2 id="conn">6) Conectivos criativos — rotação curta</h2>
-    <div class="card small">
-      <p><b>Abertura/Ângulo:</b> À luz de; Em chave pública; Na contramão de; Sob tal prisma.</p>
-      <p><b>Prova/Norma:</b> Conforme dispõe; Nos termos de; À guisa do art.; Segundo.</p>
-      <p><b>Causa/Explicação:</b> na medida em que; visto que; uma vez que; porquanto.</p>
-      <p><b>Contraste/Concessão:</b> entretanto; contudo; todavia; não obstante; embora.</p>
-      <p><b>Fecho/Consecutiva:</b> portanto; por conseguinte; assim; logo; dessarte; de modo que.</p>
-    </div>
-
-    <!-- CHECKLIST -->
+    <!-- 7) CHECKLIST -->
     <h2 id="check">7) Checklist final — 30 linhas</h2>
     <div class="card grid grid-4 small">
       <div>
         <h4>Introdução</h4>
         <ul>
-          <li>Gancho: Norma + Conceito</li>
-          <li>Recorte e público</li>
-          <li>Tese binária + roteiro</li>
+          <li>Gancho (lei) + cena real</li>
+          <li>Tese binária (A institucional / B sociocultural)</li>
+          <li>Ponte para P2/P3</li>
         </ul>
       </div>
       <div>
         <h4>P2</h4>
         <ul>
-          <li>Norma específica</li>
-          <li>Falha estrutural clara</li>
-          <li>Fecho pedindo solução</li>
+          <li>[NORMA] aplicada</li>
+          <li>Falha (LDO/LOA ou governança)</li>
+          <li>Ponte para a vida real</li>
         </ul>
       </div>
       <div>
         <h4>P3</h4>
         <ul>
-          <li>Um dado oficial (PNAD/SAEB/CEMADEN/PRODES)</li>
-          <li>Impacto no público</li>
+          <li>[BASE] recente</li>
+          <li>[IMPACTO] concreto</li>
           <li>Ponte para C5</li>
         </ul>
       </div>
       <div>
-        <h4>Conclusão (C5)</h4>
+        <h4>Conclusão</h4>
         <ul>
-          <li>QUEM + O QUÊ</li>
-          <li>COMO (lei + orçamento)</li>
-          <li>PARA QUÊ (efeito)</li>
-          <li>DETALHE (indicador + prazo)</li>
+          <li>Medida 1 (gestão) + Medida 2 (mediação)</li>
+          <li>Mesma [NORMA] do P2</li>
+          <li>[INDICADOR] + [PRAZO]</li>
         </ul>
       </div>
     </div>
 
-    <p class="muted small">© v4.3 — Introdução reformulada com base no nosso banco (padrões de notas 1000, conectivos premium e macrotendências 2024–2025). Exporte: <span class="k">Ctrl/Cmd</span>+<span class="k">P</span> → Destino “Salvar como PDF”.</p>
+    <div class="pagebreak"></div>
 
-    <!--
-      Licença: CC BY-NC-ND 4.0
-      Você pode compartilhar com crédito, mas NÃO pode usar comercialmente e NÃO pode fazer obras derivadas.
-      Texto da licença: https://creativecommons.org/licenses/by-nc-nd/4.0/
-    -->
+    <!-- 8) GLOSSÁRIO -->
+    <h2 id="glossario">8) Glossário — variáveis e siglas (clareza total)</h2>
+    <div class="card grid grid-2 small">
+      <div class="card">
+        <h3>Variáveis [ ] — o que são e como preencher</h3>
+        <ul>
+          <li><span class="chip">[RECORTE]</span> — foco do problema em 4–6 palavras. <i>Ex.:</i> “letramento midiático escolar”. <b>Erro comum:</b> ser genérico (“desinformação”).</li>
+          <li><span class="chip">[PÚBLICO]</span> — quem sente a dor. <i>Ex.:</i> “estudantes da rede pública”. <b>Erro:</b> “brasileiros”.</li>
+          <li><span class="chip">[LOCAL]</span> — onde ocorre (opcional). <i>Ex.:</i> “em bairros de encosta de [cidade]”.</li>
+          <li><span class="chip">[NORMA]</span> — lei/portaria usada no P2 e na C5. <i>Ex.:</i> Lei 12.608/2012.</li>
+          <li><span class="chip">[BASE]</span> — dado oficial do P3. <i>Ex.:</i> PNAD (ago/2025).</li>
+          <li><span class="chip">[IMPACTO]</span> — efeito prático no público. <i>Ex.:</i> “perda de aulas”, “exposição a risco”.</li>
+          <li><span class="chip">[INDICADOR]</span> — medida simples da solução. <i>Ex.:</i> “% de escolas com checagem”.</li>
+          <li><span class="chip">[PRAZO]</span> — tempo real de entrega. <i>Ex.:</i> “12 meses”.</li>
+          <li><span class="chip">[AMBIENTE/SETOR]</span> — onde a rotina acontece. <i>Ex.:</i> “escolas/UBS/bairros de risco”.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Siglas/ferramentas da estrutura</h3>
+        <ul>
+          <li><b>P2</b> — 2º parágrafo (1º do desenvolvimento): mostra a <b>causa institucional</b> usando <b>lei</b>.</li>
+          <li><b>P3</b> — 3º parágrafo (2º do desenvolvimento): mostra a <b>face social</b> usando <b>dado</b>.</li>
+          <li><b>C5</b> — Competência 5 (proposta): <b>QUEM</b>, <b>O QUÊ</b>, <b>COMO</b>, <b>PARA QUÊ</b>, <b>DETALHE</b>.</li>
+          <li><b>UA-4</b> — Tópico → Prova → Explicação → Fecho-ponte (esqueleto de cada parágrafo).</li>
+        </ul>
+        <p><b>Dica:</b> P2 e P3 espelham a tese A/B; a C5 responde às duas frentes com duas medidas paralelas.</p>
+      </div>
+    </div>
+
+    <!-- 9) PONTES -->
+    <h2 id="pontes">9) Biblioteca de pontes — finalize parágrafos com fluidez</h2>
+    <div class="card small">
+      <p><b>Fim do P2 → início do P3</b>: “Logo, norma e orçamento precisam se encontrar; <u>em segunda análise</u>, o cotidiano mostra por quê.”</p>
+      <p><b>Fim do P3 → início da C5</b>: “Dessarte, saber não basta: é <u>hora de fazer</u> — a seguir, as medidas.”</p>
+      <p><b>Fecho final</b>: “Ao cabo, lei, orçamento e gente caminham juntos — e o direito sai do papel.”</p>
+    </div>
+
+    <p class="muted small">© v4.6 — Guia didático completo (variáveis e siglas explicadas). Exporte: <span class="k">Ctrl/Cmd</span>+<span class="k">P</span> → “Salvar como PDF”.</p>
+
+    <!-- Nota de licença fixa para impressão -->
+    <div class="print-license">© 2025 Pedro Auharek — CC BY-NC-ND 4.0 — Uso não comercial, sem obras derivadas — https://creativecommons.org/licenses/by-nc-nd/4.0/</div>
+
+    <!-- Rodapé -->
     <footer class="site-footer">
       © 2025 Pedro Auharek • Licença:
-      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">
-        CC BY-NC-ND 4.0
-      </a>
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
       • Uso não comercial e sem obras derivadas. Cite a fonte.
     </footer>
   </div>
