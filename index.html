@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Esqueleto Global — Redação ENEM 2025 (v4.6) • Guia Didático + Glossário — PDF-Ready</title>
+  <title>Esqueleto Global — Redação ENEM 2025 (v4.7) • Guia Didático + Glossário + Referências Coringa — PDF-Ready</title>
 
   <!-- Direitos autorais -->
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -17,8 +17,8 @@
   <!-- Social (Open Graph / Twitter) -->
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Esqueleto Global — Redação ENEM 2025 (v4.6) • Guia Didático + Glossário — PDF-Ready">
-  <meta property="og:description" content="Guia completo: introdução autoral, P2/P3 paralelos, C5 compacta, cartões de Leis e Dados, conectivos e glossário. PDF-Ready.">
+  <meta property="og:title" content="Esqueleto Global — Redação ENEM 2025 (v4.7) • Guia Didático + Glossário + Referências Coringa — PDF-Ready">
+  <meta property="og:description" content="Guia completo: introdução autoral, P2/P3 paralelos, C5 compacta, cartões de Leis e Dados, conectivos e glossário — agora com 10 referências coringa (dado + lei) por tópico-mãe. PDF-Ready.">
   <meta name="twitter:card" content="summary">
 
   <!-- Schema.org -->
@@ -26,7 +26,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "Esqueleto Global — Redação ENEM 2025 (v4.6)",
+    "name": "Esqueleto Global — Redação ENEM 2025 (v4.7)",
     "creator": { "@type": "Person", "name": "Pedro Auharek" },
     "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
     "copyrightNotice": "© 2025 Pedro Auharek"
@@ -117,29 +117,13 @@
     .print-license{position:fixed;bottom:8mm;right:10mm;font-size:10px;color:#64748b}
     @media screen{.print-license{display:none}}
 
-    /* ======== RESPONSIVIDADE REAL (celular e tablet) ======== */
-    /* Tipografia fluida nos títulos */
+    /* ======== RESPONSIVIDADE ======== */
     h1{font-size:clamp(22px, 4.2vw, 30px)}
     h2{font-size:clamp(18px, 3.4vw, 22px)}
     h3{font-size:clamp(16px, 3vw, 18px)}
-
-    /* Quebra padrão para telas médias */
-    @media (max-width: 1024px){
-      .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .bridge{grid-template-columns:1fr}
-    }
-
-    /* Mobile primeiro: empilhar tudo de 1 coluna e afrouxar espaçamentos */
-    @media (max-width: 720px){
-      .page{max-width:100%;margin:0;padding:16px;border:0;border-radius:0;box-shadow:none}
-      .grid-2,.grid-3,.grid-4,.gloss,.steps{grid-template-columns:1fr}
-      .printbar{padding:8px;gap:8px}
-      .btn{width:100%}
-      pre{font-size:13px}
-      .bridge{grid-template-columns:1fr}
-      .toc ol{padding-left:18px}
-    }
+    @media (max-width: 1024px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.bridge{grid-template-columns:1fr}}
+    @media (max-width: 720px){.page{max-width:100%;margin:0;padding:16px;border:0;border-radius:0;box-shadow:none}
+      .grid-2,.grid-3,.grid-4,.gloss,.steps{grid-template-columns:1fr}}
 
     /* PRINT */
     @page{size:A4;margin:16mm 14mm 18mm 14mm}
@@ -165,12 +149,12 @@
       <span class="small muted">A4 • Margens padrão • Escala 100% • Retrato</span>
     </div>
 
-    <h1>Esqueleto Global — ENEM <span class="muted">(v4.6 • 2025)</span></h1>
+    <h1>Esqueleto Global — ENEM <span class="muted">(v4.7 • 2025)</span></h1>
     <p class="license-top">Licença:
       <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>
       — uso não comercial e sem obras derivadas. Cite a fonte.
     </p>
-    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
+    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Agora com <b>10 referências coringa</b> (estatística + base constitucional) por tópico‑mãe. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
 
     <div class="card toc">
       <strong>Sumário</strong>
@@ -183,8 +167,9 @@
         <li><a href="#leis">Cartões de Leis — CF/88 • LDB • SUS • ECA • RAPS • CNJ • Lei 12.608</a></li>
         <li><a href="#conn">Conectivos humanos — rotação anti-genérica</a></li>
         <li><a href="#check">Checklist final — 30 linhas</a></li>
-        <li><a href="#pontes">8) Biblioteca de pontes</a></li>
-        <li><a href="#glossario">9) Glossário — variáveis e siglas</a></li>
+        <li><a href="#pontes">Biblioteca de pontes</a></li>
+        <li><a href="#glossario">Glossário — variáveis e siglas</a></li>
+        <li><a href="#refs-coringa"><b>Referências coringa por tópico (dado + lei)</b></a></li>
         <li><a href="#treino"><b>Treino prático</b> — executar</a></li>
       </ol>
     </div>
@@ -202,7 +187,7 @@
       <p class="muted small"><b>Regras de ouro:</b> (1) Cada parágrafo cumpre uma função. (2) Conectivos variados. (3) Indicador + prazo na C5. (4) Linguagem clara, sem jargão.</p>
     </div>
 
-    <!-- 1) INTRODUÇÃO -->
+    <!-- 1) INTRODUÇÃO (mantida da v4.6) -->
     <h2 id="intro">1) Introdução — <span class="pill">autoral</span> <span class="pill">humana</span> <span class="pill">global</span></h2>
     <div class="card">
       <p class="muted">Âncora jurídica + tese binária (A institucional • B sociocultural) + ponte para P2/P3. Variáveis: <span class="chip">[RECORTE]</span> <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.</p>
@@ -270,7 +255,7 @@ Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob ta
         <div class="card">
           <h3>2.2 P3 — Plano sociocultural (Dado → Impacto → Ponte)</h3>
           <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>.
-Prova — <b>Segundo</b> [BASE] (ex.: PNAD ago/2025; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
+Prova — <b>Segundo</b> [BASE] (ex.: PNAD 2023; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
 Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete.
 Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
           <p class="small"><b>Função:</b> comprovar a face social com dado oficial e apontar impacto.</p>
@@ -313,7 +298,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- 4) DADOS -->
+    <!-- 4) DADOS (mantidos) -->
     <h2 id="dados">4) Cartões de Dados — prontos para o P3</h2>
     <div class="grid grid-2 small">
       <div class="card"><h3>PNAD (ago/2025)</h3><p><b>Dado:</b> desemprego 5,6%; subutilização 14,1%.</p><p><b>Como usar:</b> pressiona renda/tempo escolar/adesão a serviços.</p></div>
@@ -322,7 +307,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       <div class="card"><h3>PRODES (2024)</h3><p><b>Dado:</b> Amazônia 6.288 km²; Cerrado 8.174 km².</p><p><b>Como usar:</b> pressão ambiental → serviços e abastecimento.</p></div>
     </div>
 
-    <!-- 5) LEIS -->
+    <!-- 5) LEIS (mantidos) -->
     <h2 id="leis">5) Cartões de Leis — prontos para P2/C5</h2>
     <div class="grid grid-3 small">
       <div class="card"><h3>CF/88 — arts. 6º e 165</h3><p>Direitos sociais + viabilidade (PPA-LDO-LOA).</p></div>
@@ -333,7 +318,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       <div class="card"><h3>Port. 3.088/2011 (RAPS) + Prov. 199/2025</h3><p>Saúde mental territorial + cidadania documental.</p></div>
     </div>
 
-    <!-- 6) CONECTIVOS -->
+    <!-- 6) CONECTIVOS (mantidos) -->
     <h2 id="conn">6) Conectivos humanos — rotação curta</h2>
     <div class="card small">
       <p><b>Abertura/ângulo:</b> À luz de; Em chave pública; Diante desse quadro; Sob tal prisma.</p>
@@ -344,7 +329,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       <p class="muted">Meta: 10–14 conectivos por texto; evite repetir o mesmo conectivo em frases seguidas.</p>
     </div>
 
-    <!-- 7) CHECKLIST -->
+    <!-- 7) CHECKLIST (mantidos) -->
     <h2 id="check">7) Checklist final — 30 linhas</h2>
     <div class="card grid grid-4 small">
       <div><h4>Introdução</h4><ul><li>Gancho (lei) + cena real</li><li>Tese binária (A/B)</li><li>Ponte para P2/P3</li></ul></div>
@@ -355,7 +340,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- 8) PONTES -->
+    <!-- 8) PONTES (mantidos) -->
     <h2 id="pontes">8) Biblioteca de pontes — finalize parágrafos com fluidez</h2>
     <div class="bridges">
       <div class="bridge">
@@ -374,7 +359,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- 9) GLOSSÁRIO -->
+    <!-- 9) GLOSSÁRIO (mantidos) -->
     <h2 id="glossario">9) Glossário — variáveis e siglas (clareza total)</h2>
     <div class="gloss">
       <div class="panel">
@@ -423,8 +408,96 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- TREINO PRÁTICO -->
-    <h2 id="treino">Treino prático — executar</h2>
+    <!-- 10) REFERÊNCIAS CORINGA POR TÓPICO -->
+    <h2 id="refs-coringa">10) Referências coringa por tópico (estatística + Constituição)</h2>
+    <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico‑mãe traz: (1) <b>Dado coringa</b> (ano + descrição) e (2) <b>Base constitucional</b> (artigo + aplicação). Ao final, indicamos <b>como usar</b> no texto.</p>
+
+    <div class="grid grid-2 small">
+      <!-- 1. Direitos sociais & cidadania documental -->
+      <div class="card">
+        <h3>1) Direitos sociais & cidadania documental</h3>
+        <p><b>Dado coringa (2023):</b> <u>Sub‑registro de nascimento</u> caiu para <b>1,05%</b>, o menor da série desde 2015 — redução contínua e ainda desigual por região. <i>Fonte: IBGE, Estatísticas do Registro Civil 2023</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 6º</u> (direitos sociais) + <u>Art. 5º</u> (igualdade) — e <u>Provimento CNJ nº 199/2025</u> para erradicar o sub‑registro, integrando Judiciário e cartórios.</p>
+        <p><b>Como usar:</b> <b>P2</b> âncora em art. 6º + CNJ 199 (fluxo CRAS–Cartório–Escola); <b>P3</b> mostra 1,05% com recorte local; <b>C5</b> prevê mutirões com meta na LDO/LOA (art. 165).</p>
+      </div>
+
+      <!-- 2. Inclusão & direitos humanos -->
+      <div class="card">
+        <h3>2) Inclusão & direitos humanos (igualdade material)</h3>
+        <p><b>Dado coringa (2022):</b> Mulheres dedicam <b>21,3h/sem</b> a cuidados/afazeres vs. <b>11,7h</b> homens; diferença estrutural impacta renda e estudo. <i>Fonte: PNAD Contínua – Outras formas de trabalho</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 3º, IV</u> (promover o bem de todos, sem preconceitos) + <u>Art. 5º, I</u> (igualdade em direitos e obrigações).</p>
+        <p><b>Como usar:</b> <b>P2</b> articula igualdade (arts. 3º/5º) a políticas de cuidado; <b>P3</b> usa as horas para evidenciar a barreira; <b>C5</b> cria serviço de cuidado comunitário e metas de frequência escolar/emprego.</p>
+      </div>
+
+      <!-- 3. Cultura & acesso -->
+      <div class="card">
+        <h3>3) Cultura & acesso simbólico</h3>
+        <p><b>Dado coringa (2023):</b> <b>31,4%</b> da população vive em municípios sem <u>museus</u> e apenas <b>9,1%</b> dos municípios têm <u>salas de cinema</u>. <i>Fonte: IBGE – Munic 2023 (cultura)</i>.</p>
+        <p><b>Base constitucional:</b> <u>Arts. 215–216</u> (direitos culturais e proteção do patrimônio).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 215–216 (dever de acesso cultural); <b>P3</b> usa Munic 2023 para mostrar deserto cultural; <b>C5</b> prevê circuito cultural itinerante com indicador de público.</p>
+      </div>
+
+      <!-- 4. Informação & tecnologia -->
+      <div class="card">
+        <h3>4) Informação & tecnologia (inclusão digital)</h3>
+        <p><b>Dado coringa (2023):</b> Internet em <b>92,5%</b> dos domicílios (72,5 milhões); <b>5,9 milhões</b> seguem desconectados — custo e falta de habilidade lideram as razões. <i>Fonte: PNAD Contínua TIC 2023</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º, XIV</u> (acesso à informação) + <u>Art. 220</u> (comunicação social).</p>
+        <p><b>Como usar:</b> <b>P2</b> invoca 5º/220 para políticas de letramento e infraestrutura; <b>P3</b> usa 92,5% vs. 5,9 mi; <b>C5</b> cria “pontos de wi‑fi” e oficinas com meta de adesão.</p>
+      </div>
+
+      <!-- 5. Saúde mental & vulnerabilidades -->
+      <div class="card">
+        <h3>5) Saúde mental & vulnerabilidades</h3>
+        <p><b>Dado coringa (2019):</b> <b>10,2%</b> dos adultos (18+) relataram diagnóstico de <u>depressão</u> — cerca de 16,3 milhões de pessoas. <i>Fonte: PNS/IBGE 2019</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 196</u> (saúde como direito de todos e dever do Estado) — acoplável à <u>Lei 8.080/90</u> e à <u>Port. 3.088/2011</u> (RAPS).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 196 + SUS/RAPS; <b>P3</b> traz 10,2% com recorte de grupo; <b>C5</b> cria linha de cuidado CAPS‑UBS‑escolas com indicador de acesso.</p>
+      </div>
+
+      <!-- 6. Meio ambiente, clima & cidades -->
+      <div class="card">
+        <h3>6) Meio ambiente, clima & cidades</h3>
+        <p><b>Dado coringa (PRODES 2024):</b> <u>Desmatamento anual</u> — Amazônia <b>6.288 km²</b> (‑30,6%) e Cerrado <b>8.174 km²</b> (‑25,7%).</p>
+        <p><b>Base constitucional:</b> <u>Art. 225</u> (meio ambiente equilibrado) + <u>Lei 12.608/2012</u> (Proteção e Defesa Civil).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 225 + 12.608 (prevenção e adaptação); <b>P3</b> usa séries do PRODES; <b>C5</b> propõe plano de contingência com indicador de simulados/rotas.</p>
+      </div>
+
+      <!-- 7. Trabalho, renda & cuidado -->
+      <div class="card">
+        <h3>7) Trabalho, renda & cuidado</h3>
+        <p><b>Dado coringa (ago/2025):</b> <b>Desemprego 5,6%</b> e <b>subutilização 14,1%</b>. <i>Fonte: PNAD Contínua</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 1º, IV</u> (valores sociais do trabalho) + <u>Art. 7º</u> (direitos trabalhistas; p.ex., <em>XXX</em> igualdade salarial).</p>
+        <p><b>Como usar:</b> <b>P2</b> invoca 1º/7º para qualificação e igualdade; <b>P3</b> usa as taxas para recorte territorial; <b>C5</b> prevê mutirão de intermediação + metas de inserção.</p>
+      </div>
+
+      <!-- 8. Segurança alimentar & consumo -->
+      <div class="card">
+        <h3>8) Segurança alimentar & consumo</h3>
+        <p><b>Dado coringa (2022):</b> <b>58,7%</b> dos lares em algum grau de <u>insegurança alimentar</u>; <b>33,1 mi</b> em fome. <i>Fonte: II VIGISAN</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 6º</u> (alimentação como direito social — EC 64/2010) + <u>Lei 11.346/2006</u> (LOSAN/SISAN).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em art. 6º + LOSAN para abastecimento e compras públicas; <b>P3</b> usa VIGISAN; <b>C5</b> cria cozinhas solidárias/merenda com indicador de cobertura.</p>
+      </div>
+
+      <!-- 9. Migração & mobilidade humana -->
+      <div class="card">
+        <h3>9) Migração & mobilidade humana</h3>
+        <p><b>Dado coringa (2024):</b> <u>Refúgio</u> — <b>68.159</b> novos pedidos; <b>13.632</b> reconhecidos pelo Conare. <i>Fontes: Refúgio em Números / ACNUR</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º (caput)</u> — igualdade a brasileiros e <u>estrangeiros residentes</u>; <u>Art. 4º, II</u> — prevalência dos direitos humanos.</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 5º/4º (acolhida e documentação); <b>P3</b> usa a série de pedidos/reconhecimentos; <b>C5</b> cria balcão de orientação/documentos com metas de atendimento.</p>
+      </div>
+
+      <!-- 10. Violência & intolerâncias -->
+      <div class="card">
+        <h3>10) Violência & intolerâncias</h3>
+        <p><b>Dado coringa (2024):</b> <u>Feminicídios</u> — <b>1.492</b> casos, maior número desde 2015. <i>Fonte: Anuário Brasileiro de Segurança Pública 2025/FBSP</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º, XLII</u> (racismo: crime inafiançável e imprescritível) + <u>Art. 5º, VI</u> (liberdade de consciência e crença).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em proteção de direitos fundamentais; <b>P3</b> usa série do FBSP; <b>C5</b> propõe protocolos de proteção/acolhimento e metas de resposta.</p>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 11) TREINO PRÁTICO (mantido) -->
+    <h2 id="treino">11) Treino prático — executar</h2>
     <div class="train">
       <p class="muted">Parte prática para aplicar o guia. Leia o tema, use os textos de apoio e rascunhe tese/argumentos e C5 aqui mesmo.</p>
 
@@ -582,7 +655,7 @@ sai do papel.</code></pre>
       </details>
     </div>
 
-    <p class="muted small" style="margin-top:16px">© v4.6 — Guia didático completo. Exporte: <span class="chip">Ctrl/Cmd + P</span> → “Salvar como PDF”.</p>
+    <p class="muted small" style="margin-top:16px">© v4.7 — Guia didático completo + referências coringa. Exporte: <span class="chip">Ctrl/Cmd + P</span> → “Salvar como PDF”.</p>
 
     <!-- Nota de licença fixa para impressão -->
     <div class="print-license">© 2025 Pedro Auharek — CC BY-NC-ND 4.0 — Uso não comercial, sem obras derivadas — https://creativecommons.org/licenses/by-nc-nd/4.0/</div>
@@ -610,4 +683,3 @@ sai do papel.</code></pre>
   </script>
 </body>
 </html>
-
