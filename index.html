@@ -98,7 +98,7 @@
     .beta{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:14px}
     .beta strong{color:#9a3412}
 
-    /* BLOCO RETRÁTIL: “Mapa de estrutura para esse texto” */
+    /* BLOCO RETRÁTIL (reutilizado nos subtópicos 8.1 e 8.2 e no mapa final) */
     details.map{border:1px solid #dbeafe;background:#f8fbff;border-radius:14px;overflow:hidden;margin:14px 0}
     details.map summary{
       list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
@@ -174,7 +174,13 @@
         <li><a href="#pontes">5) Biblioteca de pontes — finalize parágrafos com fluidez</a></li>
         <li><a href="#leis">6) Cartões de Leis — prontos para P2/C5</a></li>
         <li><a href="#dados">7) Cartões de Dados — prontos para o P3</a></li>
-        <li><a href="#refs-coringa">8) Referências coringa por tópico (estatística + Constituição)</a></li>
+        <li>
+          <a href="#refs-coringa">8) Referências coringa por tópico (estatística + Constituição)</a>
+          <ul>
+            <li><a href="#refs-8-1">8.1) Referências coringa de causas comuns</a></li>
+            <li><a href="#refs-8-2">8.2) Referências e repertório coringa especial</a></li>
+          </ul>
+        </li>
         <li><a href="#conn">9) Conectivos humanos — rotação curta</a></li>
         <li><a href="#check">10) Checklist final — 30 linhas</a></li>
         <li><a href="#treino">11) Treino prático — executar</a></li>
@@ -196,7 +202,7 @@
 
     <div class="pagebreak"></div>
 
-    <!-- 1) GLOSSÁRIO (trazido para o topo) -->
+    <!-- 1) GLOSSÁRIO -->
     <h2 id="glossario">1) Glossário — variáveis e siglas (clareza total)</h2>
     <div class="gloss">
       <div class="panel">
@@ -404,7 +410,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
     <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico-mãe traz: (1) <b>Dado coringa</b> (ano + descrição) e (2) <b>Base constitucional</b> (artigo + aplicação). Ao final, indicamos <b>como usar</b> no texto.</p>
 
     <div class="grid grid-2 small">
-      <!-- 1. Direitos sociais & cidadania documental -->
       <div class="card">
         <h3>1) Direitos sociais & cidadania documental</h3>
         <p><b>Dado coringa (2023):</b> <u>Sub-registro de nascimento</u> caiu para <b>1,05%</b>, o menor da série desde 2015 — redução contínua e ainda desigual por região. <i>Fonte: IBGE, Estatísticas do Registro Civil 2023</i>.</p>
@@ -412,7 +417,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> âncora em art. 6º + CNJ 199 (fluxo CRAS–Cartório–Escola); <b>P3</b> mostra 1,05% com recorte local; <b>C5</b> prevê mutirões com meta na LDO/LOA (art. 165).</p>
       </div>
 
-      <!-- 2. Inclusão & direitos humanos -->
       <div class="card">
         <h3>2) Inclusão & direitos humanos (igualdade material)</h3>
         <p><b>Dado coringa (2022):</b> Mulheres dedicam <b>21,3h/sem</b> a cuidados/afazeres vs. <b>11,7h</b> homens; diferença estrutural impacta renda e estudo. <i>Fonte: PNAD Contínua – Outras formas de trabalho</i>.</p>
@@ -420,7 +424,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> articula igualdade (arts. 3º/5º) a políticas de cuidado; <b>P3</b> usa as horas para evidenciar a barreira; <b>C5</b> cria serviço de cuidado comunitário e metas de frequência escolar/emprego.</p>
       </div>
 
-      <!-- 3. Cultura & acesso -->
       <div class="card">
         <h3>3) Cultura & acesso simbólico</h3>
         <p><b>Dado coringa (2023):</b> <b>31,4%</b> da população vive em municípios sem <u>museus</u> e apenas <b>9,1%</b> dos municípios têm <u>salas de cinema</u>. <i>Fonte: IBGE – Munic 2023 (cultura)</i>.</p>
@@ -428,7 +431,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em 215–216 (dever de acesso cultural); <b>P3</b> usa Munic 2023 para mostrar deserto cultural; <b>C5</b> prevê circuito cultural itinerante com indicador de público.</p>
       </div>
 
-      <!-- 4. Informação & tecnologia -->
       <div class="card">
         <h3>4) Informação & tecnologia (inclusão digital)</h3>
         <p><b>Dado coringa (2023):</b> Internet em <b>92,5%</b> dos domicílios (72,5 milhões); <b>5,9 milhões</b> seguem desconectados — custo e falta de habilidade lideram as razões. <i>Fonte: PNAD Contínua TIC 2023</i>.</p>
@@ -436,7 +438,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> invoca 5º/220 para políticas de letramento e infraestrutura; <b>P3</b> usa 92,5% vs. 5,9 mi; <b>C5</b> cria “pontos de wi-fi” e oficinas com meta de adesão.</p>
       </div>
 
-      <!-- 5. Saúde mental & vulnerabilidades -->
       <div class="card">
         <h3>5) Saúde mental & vulnerabilidades</h3>
         <p><b>Dado coringa (2019):</b> <b>10,2%</b> dos adultos (18+) relataram diagnóstico de <u>depressão</u> — cerca de 16,3 milhões de pessoas. <i>Fonte: PNS/IBGE 2019</i>.</p>
@@ -444,7 +445,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em 196 + SUS/RAPS; <b>P3</b> traz 10,2% com recorte de grupo; <b>C5</b> cria linha de cuidado CAPS-UBS-escolas com indicador de acesso.</p>
       </div>
 
-      <!-- 6. Meio ambiente, clima & cidades -->
       <div class="card">
         <h3>6) Meio ambiente, clima & cidades</h3>
         <p><b>Dado coringa (PRODES 2024):</b> <u>Desmatamento anual</u> — Amazônia <b>6.288 km²</b> (-30,6%) e Cerrado <b>8.174 km²</b> (-25,7%).</p>
@@ -452,7 +452,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em 225 + 12.608 (prevenção e adaptação); <b>P3</b> usa séries do PRODES; <b>C5</b> propõe plano de contingência com indicador de simulados/rotas.</p>
       </div>
 
-      <!-- 7. Trabalho, renda & cuidado -->
       <div class="card">
         <h3>7) Trabalho, renda & cuidado</h3>
         <p><b>Dado coringa (ago/2025):</b> <b>Desemprego 5,6%</b> e <b>subutilização 14,1%</b>. <i>Fonte: PNAD Contínua</i>.</p>
@@ -460,7 +459,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> invoca 1º/7º para qualificação e igualdade; <b>P3</b> usa as taxas para recorte territorial; <b>C5</b> prevê mutirão de intermediação + metas de inserção.</p>
       </div>
 
-      <!-- 8. Segurança alimentar & consumo -->
       <div class="card">
         <h3>8) Segurança alimentar & consumo</h3>
         <p><b>Dado coringa (2022):</b> <b>58,7%</b> dos lares em algum grau de <u>insegurança alimentar</u>; <b>33,1 mi</b> em fome. <i>Fonte: II VIGISAN</i>.</p>
@@ -468,7 +466,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em art. 6º + LOSAN para abastecimento e compras públicas; <b>P3</b> usa VIGISAN; <b>C5</b> cria cozinhas solidárias/merenda com indicador de cobertura.</p>
       </div>
 
-      <!-- 9. Migração & mobilidade humana -->
       <div class="card">
         <h3>9) Migração & mobilidade humana</h3>
         <p><b>Dado coringa (2024):</b> <u>Refúgio</u> — <b>68.159</b> novos pedidos; <b>13.632</b> reconhecidos pelo Conare. <i>Fontes: Refúgio em Números / ACNUR</i>.</p>
@@ -476,7 +473,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em 5º/4º (acolhida e documentação); <b>P3</b> usa a série de pedidos/reconhecimentos; <b>C5</b> cria balcão de orientação/documentos com metas de atendimento.</p>
       </div>
 
-      <!-- 10. Violência & intolerâncias -->
       <div class="card">
         <h3>10) Violência & intolerâncias</h3>
         <p><b>Dado coringa (2024):</b> <u>Feminicídios</u> — <b>1.492</b> casos, maior número desde 2015. <i>Fonte: Anuário Brasileiro de Segurança Pública 2025/FBSP</i>.</p>
@@ -484,6 +480,99 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><b>Como usar:</b> <b>P2</b> ancora em proteção de direitos fundamentais; <b>P3</b> usa série do FBSP; <b>C5</b> propõe protocolos de proteção/acolhimento e metas de resposta.</p>
       </div>
     </div>
+
+    <!-- 8.1) SUBTÓPICO RETRÁTIL: CAUSAS COMUNS -->
+    <details class="map" id="refs-8-1">
+      <summary>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        8.1 Referências coringa de causas comuns
+      </summary>
+      <div class="map-inner">
+        <div class="grid grid-2 small">
+          <div class="card">
+            <h3>1) Quando a causa é pobreza</h3>
+            <p><b>Dado (IBGE, 2023):</b> a proporção de brasileiros abaixo da linha de pobreza do Banco Mundial caiu de <b>31,6%</b> para <b>27,4%</b>; a extrema pobreza recuou de <b>5,9%</b> para <b>4,4%</b>. Mede renda domiciliar per capita em PPC (US$ 6,85/dia para pobreza; US$ 2,15/dia extrema pobreza).</p>
+            <p><b>Uso:</b> dimensiona impacto da renda em qualquer política pública: saúde, educação, violência, mobilidade, moradia.</p>
+            <p><b>Como citar:</b> IBGE, Síntese de Indicadores Sociais 2024, dados de 2023. <span class="small muted">Agência de Notícias - IBGE</span></p>
+            <p><b>Constituição:</b> <u>art. 23, X</u> e <u>art. 203</u>. O art. 23, X impõe a todos os entes federativos “combater as causas da pobreza e os fatores de marginalização”; o art. 203 define a assistência social a quem dela necessitar e seus objetivos (proteção à família, integração ao mercado de trabalho etc.).</p>
+            <p><b>Uso:</b> dá base jurídica para sustentar dever estatal estruturante e políticas redistributivas.</p>
+            <p><b>Como citar:</b> CF/88, art. 23, X; art. 203.</p>
+          </div>
+
+          <div class="card">
+            <h3>2) Quando a causa é alienação (desengajamento informacional/cívico)</h3>
+            <p><b>Dado (Reuters Institute, 2024):</b> <b>47%</b> dos brasileiros evitam notícias (“às vezes” ou “frequentemente”) e apenas <b>43%</b> confiam na mídia. Mede afastamento e ceticismo perante informação jornalística.</p>
+            <p><b>Uso:</b> abre argumento sobre apatia política, bolhas informativas, vulnerabilidade à desinformação e baixa participação.</p>
+            <p><b>Como citar:</b> Digital News Report 2024, síntese Brasil.</p>
+            <p><b>Constituição:</b> <u>art. 220</u> (caput) garante liberdade de informação e veda embaraços à plena liberdade jornalística; <u>art. 1º, parágrafo único</u>: “todo poder emana do povo”.</p>
+            <p><b>Uso:</b> ancora tese de que o acesso plural à informação e o exercício da soberania popular exigem políticas de letramento midiático e transparência.</p>
+            <p><b>Como citar:</b> CF/88, art. 220; art. 1º, parágrafo único.</p>
+          </div>
+
+          <div class="card">
+            <h3>3) Quando a causa é má educação/ensino</h3>
+            <p><b>Dado (MEC/INEP, 2023):</b> <b>56%</b> das crianças estavam alfabetizadas ao fim do 2º ano; indicador nacional de referência para aprendizado inicial.</p>
+            <p><b>Uso:</b> mostra gargalo de aprendizagem básica que contamina todos os outros desfechos sociais. Serve para temas de trabalho, tecnologia, participação política, saúde.</p>
+            <p><b>Como citar:</b> MEC/INEP, Indicador Criança Alfabetizada (divulgação 2024, dados 2023). <span class="small muted">Serviços e Informações do Brasil</span></p>
+            <p><b>Constituição:</b> <u>art. 206, VII</u> (garantia de padrão de qualidade) e <u>art. 205</u> (educação como direito de todos e dever do Estado e da família).</p>
+            <p><b>Uso:</b> sustenta cobrança por políticas de qualidade, financiamento e gestão baseada em evidências (alfabetização na idade certa, tempo integral, formação docente).</p>
+            <p><b>Como citar:</b> CF/88, art. 206, VII; art. 205.</p>
+          </div>
+        </div>
+
+        <div class="card small">
+          <h4>Mini-roteiro de uso em parágrafo</h4>
+          <ul>
+            <li>Quantifique o problema com o dado.</li>
+            <li>Conecte à tese: “logo, a causa principal é X”.</li>
+            <li>Endureça com a CF/88 mostrando que há dever jurídico de enfrentar a causa.</li>
+            <li>Amarre com proposta específica e exequível.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- 8.2) SUBTÓPICO RETRÁTIL: REPERTÓRIO ESPECIAL -->
+    <details class="map" id="refs-8-2">
+      <summary>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        8.2 Referências e repertório coringa especial
+      </summary>
+      <div class="map-inner">
+        <div class="card">
+          <h3>1) Diagnóstico sob rótulo e necessidade de garantias no cuidado</h3>
+          <p><b>Dado:</b> “Oito voluntários saudáveis foram internados em 12 hospitais; nenhum foi identificado como são pela equipe; média de 19 dias internados; 35/118 pacientes suspeitaram que eram saudáveis.”</p>
+          <p><b>Fonte para citação:</b> ROSENHAN, D. L. <i>On Being Sane in Insane Places</i>. <i>Science</i>, 1973.</p>
+          <p><b>Constituição:</b> CF/88, <u>art. 196</u>: “saúde é direito de todos e dever do Estado”, com políticas que reduzam risco de agravos e assegurem acesso universal e igualitário. Use para exigir protocolos, supervisão e atendimento digno em saúde mental.</p>
+        </div>
+
+        <div class="card">
+          <h4>Explicação</h4>
+          <p>Experimento de Rosenhan (Science, 1973): oito “pseudopacientes” saudáveis apresentaram um único sintoma fabricado (vozes) para internação em 12 hospitais. Todos foram admitidos, a permanência variou de 7 a 52 dias (média 19) e nenhum foi identificado pela equipe como são; ironicamente, 35 de 118 pacientes desconfiaram que eles eram saudáveis. O estudo expôs como rótulos e contexto moldam a interpretação clínica e o tratamento. Use para discutir erro institucional, estigma, validade diagnóstica e a necessidade de protocolos baseados em evidência.</p>
+        </div>
+
+        <div class="card">
+          <h4>Formas elegantes de inserir no texto</h4>
+          <ul>
+            <li><b>Contextualização:</b> “A literatura clássica em saúde mental mostrou que o rótulo diagnóstico pode contaminar a leitura do comportamento. Em 1973, um experimento publicado na <i>Science</i> relatou internações de pessoas saudáveis com permanência média de 19 dias sem detecção pela equipe assistente, evidenciando a força do contexto institucional sobre o julgamento clínico.”</li>
+            <li><b>Tese ancorada na CF/88:</b> “Num país em que a saúde é direito universal (art. 196), protocolos padronizados, avaliação multiprofissional e transparência são essenciais para reduzir erros e garantir dignidade no cuidado.”</li>
+            <li><b>Sofisticação crítica:</b> “Embora o estudo tenha recebido críticas metodológicas, o debate que inaugurou segue pertinente, como indicam dados contemporâneos de confiabilidade do DSM-5.”</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Onde esse repertório encaixa bem (temas possíveis)</h4>
+          <ul>
+            <li>Saúde mental e SUS: qualidade do cuidado, humanização, protocolos e direitos do paciente.</li>
+            <li>Estigma e rotulagem social: como rótulos produzem exclusão e maus desfechos.</li>
+            <li>Erro institucional e accountability: segurança do paciente, cultura de notificação de erros.</li>
+            <li>Letramento científico e metodologia: limites da evidência, necessidade de replicação, vieses de observação.</li>
+            <li>Políticas públicas e regulação: formação de profissionais, auditoria de serviços, avaliação independente.</li>
+            <li>Direitos humanos: dignidade da pessoa com transtorno mental e cuidado centrado na pessoa.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
 
     <div class="pagebreak"></div>
 
@@ -694,6 +783,18 @@ sai do papel.</code></pre>
       const non = document.getElementById('linhas-sem-vazias');
       if (total) total.textContent = lines.length;
       if (non) non.textContent = nonEmpty.length;
+    })();
+
+    // Abre automaticamente os <details> 8.1 e 8.2 ao acessar pelos links do sumário
+    (function () {
+      function openDetailsFromHash(){
+        const id = location.hash && location.hash.slice(1);
+        if (!id) return;
+        const d = document.getElementById(id);
+        if (d && d.tagName.toLowerCase() === 'details') d.open = true;
+      }
+      window.addEventListener('hashchange', openDetailsFromHash);
+      openDetailsFromHash();
     })();
   </script>
 </body>
