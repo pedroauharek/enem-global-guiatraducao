@@ -121,9 +121,15 @@
     h1{font-size:clamp(22px, 4.2vw, 30px)}
     h2{font-size:clamp(18px, 3.4vw, 22px)}
     h3{font-size:clamp(16px, 3vw, 18px)}
-    @media (max-width: 1024px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.bridge{grid-template-columns:1fr}}
-    @media (max-width: 720px){.page{max-width:100%;margin:0;padding:16px;border:0;border-radius:0;box-shadow:none}
-      .grid-2,.grid-3,.grid-4,.gloss,.steps{grid-template-columns:1fr}}
+    @media (max-width: 1024px){
+      .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .bridge{grid-template-columns:1fr}
+    }
+    @media (max-width: 720px){
+      .page{max-width:100%;margin:0;padding:16px;border:0;border-radius:0;box-shadow:none}
+      .grid-2,.grid-3,.grid-4,.gloss,.steps{grid-template-columns:1fr}
+    }
 
     /* PRINT */
     @page{size:A4;margin:16mm 14mm 18mm 14mm}
@@ -154,23 +160,24 @@
       <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>
       — uso não comercial e sem obras derivadas. Cite a fonte.
     </p>
-    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Agora com <b>10 referências coringa</b> (estatística + base constitucional) por tópico‑mãe. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
+    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Agora com <b>10 referências coringa</b> (estatística + base constitucional) por tópico-mãe. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
 
+    <!-- SUMÁRIO REORDENADO E COERENTE (começa em 0) -->
     <div class="card toc">
       <strong>Sumário</strong>
       <ol>
-        <li><a href="#como-usar">Como usar este guia + Regras de ouro</a></li>
-        <li><a href="#intro">Introdução — autoral, humana e global</a></li>
-        <li><a href="#dev">Desenvolvimento — P2/P3 com paralelismo (UA-4+)</a></li>
-        <li><a href="#c5">Conclusão — C5 compacta (duas medidas)</a></li>
-        <li><a href="#dados">Cartões de Dados — PNAD • SAEB/IDEB • CEMADEN • PRODES</a></li>
-        <li><a href="#leis">Cartões de Leis — CF/88 • LDB • SUS • ECA • RAPS • CNJ • Lei 12.608</a></li>
-        <li><a href="#conn">Conectivos humanos — rotação anti-genérica</a></li>
-        <li><a href="#check">Checklist final — 30 linhas</a></li>
-        <li><a href="#pontes">Biblioteca de pontes</a></li>
-        <li><a href="#glossario">Glossário — variáveis e siglas</a></li>
-        <li><a href="#refs-coringa"><b>Referências coringa por tópico (dado + lei)</b></a></li>
-        <li><a href="#treino"><b>Treino prático</b> — executar</a></li>
+        <li><a href="#como-usar">0) Como usar este guia (passo a passo rápido)</a></li>
+        <li><a href="#glossario">1) Glossário — variáveis e siglas (clareza total)</a></li>
+        <li><a href="#intro">2) Introdução — autoral, humana e global</a></li>
+        <li><a href="#dev">3) Desenvolvimento — P2/P3 com paralelismo (UA-4+)</a></li>
+        <li><a href="#c5">4) Conclusão — C5 compacta (duas medidas)</a></li>
+        <li><a href="#pontes">5) Biblioteca de pontes — finalize parágrafos com fluidez</a></li>
+        <li><a href="#leis">6) Cartões de Leis — prontos para P2/C5</a></li>
+        <li><a href="#dados">7) Cartões de Dados — prontos para o P3</a></li>
+        <li><a href="#refs-coringa">8) Referências coringa por tópico (estatística + Constituição)</a></li>
+        <li><a href="#conn">9) Conectivos humanos — rotação curta</a></li>
+        <li><a href="#check">10) Checklist final — 30 linhas</a></li>
+        <li><a href="#treino">11) Treino prático — executar</a></li>
       </ol>
     </div>
 
@@ -179,188 +186,18 @@
     <div class="card">
       <ol>
         <li>Preencha <span class="chip">[RECORTE]</span>, <span class="chip">[PÚBLICO]</span> e, se souber, <span class="chip">[LOCAL]</span> na <b>Introdução</b>.</li>
-        <li>Escolha 1 <span class="chip">[NORMA]</span> (seção 5) para o <b>P2</b>.</li>
-        <li>Escolha 1 <span class="chip">[BASE]</span> (seção 4) para o <b>P3</b> e defina <span class="chip">[IMPACTO]</span>.</li>
+        <li>Escolha 1 <span class="chip">[NORMA]</span> (seção 6) para o <b>P2</b>.</li>
+        <li>Escolha 1 <span class="chip">[BASE]</span> (seção 7) para o <b>P3</b> e defina <span class="chip">[IMPACTO]</span>.</li>
         <li>Mantenha o <b>paralelismo</b>: “Em primeira análise…” (P2) / “Em segunda análise…” (P3).</li>
         <li>Na <b>Conclusão</b>, use as duas medidas paralelas com a <span class="chip">[NORMA]</span> do P2 e preencha <span class="chip">[INDICADOR]</span> e <span class="chip">[PRAZO]</span>.</li>
       </ol>
       <p class="muted small"><b>Regras de ouro:</b> (1) Cada parágrafo cumpre uma função. (2) Conectivos variados. (3) Indicador + prazo na C5. (4) Linguagem clara, sem jargão.</p>
     </div>
 
-    <!-- 1) INTRODUÇÃO (mantida da v4.6) -->
-    <h2 id="intro">1) Introdução — <span class="pill">autoral</span> <span class="pill">humana</span> <span class="pill">global</span></h2>
-    <div class="card">
-      <p class="muted">Âncora jurídica + tese binária (A institucional • B sociocultural) + ponte para P2/P3. Variáveis: <span class="chip">[RECORTE]</span> <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.</p>
-
-      <h3>1.1 Bloco universal (I1 → I4) — cole e substitua</h3>
-      <pre><code>I1 — Gancho (Norma + Conceito)
-À luz da CF/88 (art. 6º) e da cidadania social (T. H. Marshall), é inquietante que [RECORTE] persista entre [PÚBLICO] [LOCAL],
-na contramão do compromisso estatal com direitos sociais.
-
-I2 — Contexto vivo (1 linha)
-No cotidiano, o acesso ao direito se fragmenta entre filas, desinformação e soluções episódicas.
-
-I3 — Tese binária (objetiva)
-Defende-se que o quadro se sustenta (A) por falhas de planejamento e orçamento — CF/88, art. 165 (PPA-LDO-LOA) — e (B) por mediações culturais/informacionais frágeis que mantêm barreiras para [PÚBLICO].
-
-I4 — Roteiro/ponte
-Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano sociocultural (B) com base em dados oficiais recentes, para orientar medidas exequíveis.</code></pre>
-
-      <div class="grid grid-2 small">
-        <div class="card">
-          <h4>Por que funciona?</h4>
-          <ul>
-            <li><b>C2</b>: lei aplicada (arts. 6º e 165).</li>
-            <li><b>C3</b>: projeto claro (A/B).</li>
-            <li><b>C4</b>: conectivos humanos (“na contramão”, “sob tal prisma”).</li>
-            <li><b>Ponte</b>: chama P2 (norma) e P3 (dado) sem repetir ideias.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Personalização mínima</h4>
-          <ul>
-            <li><b>[RECORTE]</b>: situação concreta.</li>
-            <li><b>[PÚBLICO]</b>: grupo real.</li>
-            <li><b>[LOCAL]</b>: se houver.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>1.2 Cinco introduções-modelo (por referência-âncora)</h3>
-      <div class="grid grid-3 small">
-        <div class="card"><h4>Art. 6º + Art. 165</h4><p>I1 “À luz do art. 6º, causa estranhamento que <span class="chip">[RECORTE]</span> atinja <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.”</p><p>I2 “A vida real cobra o que a Constituição garante.”</p><p>I3 “Distância entre planejamento e execução (art. 165) + mediações frágeis.”</p><p>I4 “Examinar engrenagens institucionais e práticas socioculturais.”</p></div>
-        <div class="card"><h4>Educação (art. 205 + LDB)</h4><p>I1 “Nos termos do art. 205 e da LDB, é paradoxal que <span class="chip">[RECORTE]</span> limite <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Quando a escola não media o mundo, o mundo media a escola.”</p><p>I3 “Faltam metas e rubrica (PPA-LDO-LOA) + lacunas de letramento.”</p><p>I4 “Desenho institucional e mediações pedagógicas.”</p></div>
-        <div class="card"><h4>Saúde (art. 196 + SUS)</h4><p>I1 “Conforme o art. 196 e a Lei 8.080/90, surpreende que <span class="chip">[RECORTE]</span> atinja <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Quando a rede falha, o sofrimento vira burocracia.”</p><p>I3 “Lacunas de governança e estigma.”</p><p>I4 “Rede e informação para acesso.”</p></div>
-        <div class="card"><h4>Socioambiental (art. 225 + 12.608)</h4><p>I1 “À guisa do art. 225, é inadmissível que <span class="chip">[RECORTE]</span> penalize <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Sem planejamento, a chuva tem CEP.”</p><p>I3 “Defesa Civil pouco integrada ao orçamento + mediações frágeis.”</p><p>I4 “Mapear risco e treinar resposta com dados oficiais.”</p></div>
-        <div class="card"><h4>Documentação (CNJ 199/2025)</h4><p>I1 “Negar documentação é negar direitos: preocupa que <span class="chip">[RECORTE]</span> aprisione <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Sem papel, não há porta.”</p><p>I3 “Fluxos CRAS-Cartório-Escola tímidos + barreiras informacionais.”</p><p>I4 “Travas administrativas e culturais.”</p></div>
-      </div>
-    </div>
-
     <div class="pagebreak"></div>
 
-    <!-- 2) DESENVOLVIMENTO -->
-    <h2 id="dev">2) Desenvolvimento — P2/P3 com paralelismo (UA-4+)</h2>
-    <div class="card">
-      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[BASE]</span> • <span class="chip">[IMPACTO]</span> • <span class="chip">[LOCAL]</span>.</p>
-
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>2.1 P2 — Plano institucional (Norma → Falha → Ponte)</h3>
-          <pre><code>Tópico — <b>Em primeira análise</b>, [RECORTE] persiste entre [PÚBLICO] porque a aplicação de <b>[NORMA]</b> não vira entrega regular.
-Prova — <b>Conforme dispõe</b> <b>[NORMA]</b> (ex.: CF/88 art. 165; LDB arts. 2º–3º; Lei 8.080/90 art. 2º; Lei 12.608/2012; ECA arts. 4º, 53–54; Port. 3.088/2011; Prov. CNJ 199/2025), garantir [direito/serviço] com metas e rotinas.
-Explicação — <b>Não obstante</b>, sem meta na LDO e dotação na LOA (art. 165), a política vira ação episódica, <b>de modo que</b> [efeito].
-Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob tal prisma</b>, a vida cotidiana confirma a urgência.</code></pre>
-          <p class="small"><b>Função:</b> causa institucional com base legal + falha de execução. Feche abrindo caminho para o P3.</p>
-        </div>
-        <div class="card">
-          <h3>2.2 P3 — Plano sociocultural (Dado → Impacto → Ponte)</h3>
-          <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>.
-Prova — <b>Segundo</b> [BASE] (ex.: PNAD 2023; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
-Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete.
-Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
-          <p class="small"><b>Função:</b> comprovar a face social com dado oficial e apontar impacto.</p>
-        </div>
-      </div>
-
-      <div class="card small">
-        <h4>2.3 UA-4 — Unidade Argumentativa em 4 passos</h4>
-        <p><b>Tópico</b> → <b>Prova</b> → <b>Explicação</b> → <b>Fecho-ponte</b>. Mantém coesão e evita repetição.</p>
-      </div>
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <!-- 3) CONCLUSÃO -->
-    <h2 id="c5">3) Conclusão — C5 compacta (duas medidas)</h2>
-    <div class="card">
-      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[INDICADOR]</span> • <span class="chip">[PRAZO]</span> • <span class="chip">[AMBIENTE/SETOR]</span>.</p>
-
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>3.1 Modelo Universal — preencher e colar</h3>
-<pre><code>Síntese — <b>Diante do exposto</b>, a permanência de [RECORTE] entre [PÚBLICO] resulta de falhas de execução e mediações frágeis.
-
-Medida 1 — <b>QUEM</b>: Prefeitura/Secretaria (gestora). <b>O QUÊ</b>: incluir meta na LDO e dotação na LOA. <b>COMO</b>: aplicar <b>[NORMA]</b> + CF/88 art. 165 (PPA-LDO-LOA), com edital anual. <b>PARA QUÊ</b>: entrega contínua. <b>DETALHE</b>: atingir [INDICADOR] em [PRAZO].
-
-Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>: rotina de mediação/acolhimento (rotas, letramento, busca ativa). <b>COMO</b>: operar a mesma <b>[NORMA]</b> com protocolos simples. <b>PARA QUÊ</b>: reduzir barreiras diárias. <b>DETALHE</b>: publicar monitoramento semestral.</code></pre>
-        </div>
-        <div class="card">
-          <h3>3.2 Modelos temáticos (ajuste só as variáveis)</h3>
-          <p class="small"><b>Educação</b> — CF/88 art. 205 + LDB</p>
-          <pre><code>QUEM: Secretaria + escolas. O QUÊ: Núcleos de Letramento. COMO: [NORMA] + art. 165. PARA QUÊ: elevar proficiência. DETALHE: [INDICADOR] até [PRAZO].</code></pre>
-          <p class="small"><b>Saúde/RAPS</b> — 8.080/90 + 8.142/90 + Port. 3.088/2011</p>
-          <pre><code>QUEM: Saúde + UBS + CAPS + CRAS. O QUÊ: linha de cuidado territorial. COMO: [NORMA] + rubrica LOA. PARA QUÊ: reduzir [RECORTE]. DETALHE: queda de [INDICADOR] em [PRAZO].</code></pre>
-          <p class="small"><b>Socioambiental</b> — art. 225 + Lei 12.608</p>
-          <pre><code>QUEM: Prefeitura/Defesa Civil + Educação/Obras. O QUÊ: Plano de Contingência. COMO: [NORMA] + CEMADEN + PRODES. PARA QUÊ: reduzir impactos. DETALHE: [INDICADOR] em [PRAZO].</code></pre>
-        </div>
-      </div>
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <!-- 4) DADOS (mantidos) -->
-    <h2 id="dados">4) Cartões de Dados — prontos para o P3</h2>
-    <div class="grid grid-2 small">
-      <div class="card"><h3>PNAD (ago/2025)</h3><p><b>Dado:</b> desemprego 5,6%; subutilização 14,1%.</p><p><b>Como usar:</b> pressiona renda/tempo escolar/adesão a serviços.</p></div>
-      <div class="card"><h3>SAEB/IDEB (2023)</h3><p><b>Dado:</b> 9º ano — LP 258,8; Mat 257,1; IDEB 6,0.</p><p><b>Como usar:</b> lacunas de letramento → vulnerabilidade informacional.</p></div>
-      <div class="card"><h3>CEMADEN (2024)</h3><p><b>Dado:</b> 3.620 alertas; 1.690 ocorrências.</p><p><b>Como usar:</b> concentração territorial de risco; educação para risco.</p></div>
-      <div class="card"><h3>PRODES (2024)</h3><p><b>Dado:</b> Amazônia 6.288 km²; Cerrado 8.174 km².</p><p><b>Como usar:</b> pressão ambiental → serviços e abastecimento.</p></div>
-    </div>
-
-    <!-- 5) LEIS (mantidos) -->
-    <h2 id="leis">5) Cartões de Leis — prontos para P2/C5</h2>
-    <div class="grid grid-3 small">
-      <div class="card"><h3>CF/88 — arts. 6º e 165</h3><p>Direitos sociais + viabilidade (PPA-LDO-LOA).</p></div>
-      <div class="card"><h3>CF/88 — art. 205 + LDB</h3><p>Educação para cidadania e trabalho.</p></div>
-      <div class="card"><h3>CF/88 — art. 225 + Lei 12.608</h3><p>Ambiente equilibrado + Defesa Civil.</p></div>
-      <div class="card"><h3>Lei 8.080/90 + 8.142/90</h3><p>SUS integral + controle social.</p></div>
-      <div class="card"><h3>ECA — arts. 4º, 53–54</h3><p>Proteção integral e direito à educação.</p></div>
-      <div class="card"><h3>Port. 3.088/2011 (RAPS) + Prov. 199/2025</h3><p>Saúde mental territorial + cidadania documental.</p></div>
-    </div>
-
-    <!-- 6) CONECTIVOS (mantidos) -->
-    <h2 id="conn">6) Conectivos humanos — rotação curta</h2>
-    <div class="card small">
-      <p><b>Abertura/ângulo:</b> À luz de; Em chave pública; Diante desse quadro; Sob tal prisma.</p>
-      <p><b>Norma/dado:</b> Conforme dispõe; Nos termos de; Segundo; À luz de.</p>
-      <p><b>Causa/explicação:</b> na medida em que; porquanto; dado que; uma vez que.</p>
-      <p><b>Contraste:</b> entretanto; contudo; não obstante; apesar disso.</p>
-      <p><b>Fecho/ponte:</b> logo; por conseguinte; dessarte; com isso; ao cabo.</p>
-      <p class="muted">Meta: 10–14 conectivos por texto; evite repetir o mesmo conectivo em frases seguidas.</p>
-    </div>
-
-    <!-- 7) CHECKLIST (mantidos) -->
-    <h2 id="check">7) Checklist final — 30 linhas</h2>
-    <div class="card grid grid-4 small">
-      <div><h4>Introdução</h4><ul><li>Gancho (lei) + cena real</li><li>Tese binária (A/B)</li><li>Ponte para P2/P3</li></ul></div>
-      <div><h4>P2</h4><ul><li>[NORMA] aplicada</li><li>Falha (LDO/LOA ou governança)</li><li>Ponte para a vida real</li></ul></div>
-      <div><h4>P3</h4><ul><li>[BASE] recente</li><li>[IMPACTO] concreto</li><li>Ponte para C5</li></ul></div>
-      <div><h4>Conclusão (C5)</h4><ul><li>Medida 1 + Medida 2</li><li>Mesma [NORMA] do P2</li><li>[INDICADOR] + [PRAZO]</li></ul></div>
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <!-- 8) PONTES (mantidos) -->
-    <h2 id="pontes">8) Biblioteca de pontes — finalize parágrafos com fluidez</h2>
-    <div class="bridges">
-      <div class="bridge">
-        <div class="label">Fim do P2 → início do P3</div>
-        <div class="phrase">“Logo, norma e orçamento precisam se encontrar; <u>em segunda análise</u>, o cotidiano mostra por quê.”</div>
-      </div>
-      <div class="bridge">
-        <div class="label">Fim do P3 → início da C5</div>
-        <div class="phrase">“Dessarte, saber não basta: é <u>hora de fazer</u> — a seguir, as medidas.”</div>
-      </div>
-      <div class="bridge">
-        <div class="label">Fecho final</div>
-        <div class="phrase">“Ao cabo, lei, orçamento e gente caminham juntos — e o direito sai do papel.”</div>
-      </div>
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <!-- 9) GLOSSÁRIO (mantidos) -->
-    <h2 id="glossario">9) Glossário — variáveis e siglas (clareza total)</h2>
+    <!-- 1) GLOSSÁRIO (trazido para o topo) -->
+    <h2 id="glossario">1) Glossário — variáveis e siglas (clareza total)</h2>
     <div class="gloss">
       <div class="panel">
         <h3>Variáveis [ ] — como preencher</h3>
@@ -408,16 +245,170 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- 10) REFERÊNCIAS CORINGA POR TÓPICO -->
-    <h2 id="refs-coringa">10) Referências coringa por tópico (estatística + Constituição)</h2>
-    <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico‑mãe traz: (1) <b>Dado coringa</b> (ano + descrição) e (2) <b>Base constitucional</b> (artigo + aplicação). Ao final, indicamos <b>como usar</b> no texto.</p>
+    <!-- 2) INTRODUÇÃO -->
+    <h2 id="intro">2) Introdução — <span class="pill">autoral</span> <span class="pill">humana</span> <span class="pill">global</span></h2>
+    <div class="card">
+      <p class="muted">Âncora jurídica + tese binária (A institucional • B sociocultural) + ponte para P2/P3. Variáveis: <span class="chip">[RECORTE]</span> <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.</p>
+
+      <h3>2.1 Bloco universal (I1 → I4) — cole e substitua</h3>
+      <pre><code>I1 — Gancho (Norma + Conceito)
+À luz da CF/88 (art. 6º) e da cidadania social (T. H. Marshall), é inquietante que [RECORTE] persista entre [PÚBLICO] [LOCAL],
+na contramão do compromisso estatal com direitos sociais.
+
+I2 — Contexto vivo (1 linha)
+No cotidiano, o acesso ao direito se fragmenta entre filas, desinformação e soluções episódicas.
+
+I3 — Tese binária (objetiva)
+Defende-se que o quadro se sustenta (A) por falhas de planejamento e orçamento — CF/88, art. 165 (PPA-LDO-LOA) — e (B) por mediações culturais/informacionais frágeis que mantêm barreiras para [PÚBLICO].
+
+I4 — Roteiro/ponte
+Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano sociocultural (B) com base em dados oficiais recentes, para orientar medidas exequíveis.</code></pre>
+
+      <div class="grid grid-2 small">
+        <div class="card">
+          <h4>Por que funciona?</h4>
+          <ul>
+            <li><b>C2</b>: lei aplicada (arts. 6º e 165).</li>
+            <li><b>C3</b>: projeto claro (A/B).</li>
+            <li><b>C4</b>: conectivos humanos (“na contramão”, “sob tal prisma”).</li>
+            <li><b>Ponte</b>: chama P2 (norma) e P3 (dado) sem repetir ideias.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Personalização mínima</h4>
+          <ul>
+            <li><b>[RECORTE]</b>: situação concreta.</li>
+            <li><b>[PÚBLICO]</b>: grupo real.</li>
+            <li><b>[LOCAL]</b>: se houver.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>2.2 Cinco introduções-modelo (por referência-âncora)</h3>
+      <div class="grid grid-3 small">
+        <div class="card"><h4>Art. 6º + Art. 165</h4><p>I1 “À luz do art. 6º, causa estranhamento que <span class="chip">[RECORTE]</span> atinja <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.”</p><p>I2 “A vida real cobra o que a Constituição garante.”</p><p>I3 “Distância entre planejamento e execução (art. 165) + mediações frágeis.”</p><p>I4 “Examinar engrenagens institucionais e práticas socioculturais.”</p></div>
+        <div class="card"><h4>Educação (art. 205 + LDB)</h4><p>I1 “Nos termos do art. 205 e da LDB, é paradoxal que <span class="chip">[RECORTE]</span> limite <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Quando a escola não media o mundo, o mundo media a escola.”</p><p>I3 “Faltam metas e rubrica (PPA-LDO-LOA) + lacunas de letramento.”</p><p>I4 “Desenho institucional e mediações pedagógicas.”</p></div>
+        <div class="card"><h4>Saúde (art. 196 + SUS)</h4><p>I1 “Conforme o art. 196 e a Lei 8.080/90, surpreende que <span class="chip">[RECORTE]</span> atinja <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Quando a rede falha, o sofrimento vira burocracia.”</p><p>I3 “Lacunas de governança e estigma.”</p><p>I4 “Rede e informação para acesso.”</p></div>
+        <div class="card"><h4>Socioambiental (art. 225 + 12.608)</h4><p>I1 “À guisa do art. 225, é inadmissível que <span class="chip">[RECORTE]</span> penalize <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Sem planejamento, a chuva tem CEP.”</p><p>I3 “Defesa Civil pouco integrada ao orçamento + mediações frágeis.”</p><p>I4 “Mapear risco e treinar resposta com dados oficiais.”</p></div>
+        <div class="card"><h4>Documentação (CNJ 199/2025)</h4><p>I1 “Negar documentação é negar direitos: preocupa que <span class="chip">[RECORTE]</span> aprisione <span class="chip">[PÚBLICO]</span>.”</p><p>I2 “Sem papel, não há porta.”</p><p>I3 “Fluxos CRAS-Cartório-Escola tímidos + barreiras informacionais.”</p><p>I4 “Travas administrativas e culturais.”</p></div>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 3) DESENVOLVIMENTO -->
+    <h2 id="dev">3) Desenvolvimento — P2/P3 com paralelismo (UA-4+)</h2>
+    <div class="card">
+      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[BASE]</span> • <span class="chip">[IMPACTO]</span> • <span class="chip">[LOCAL]</span>.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>3.1 P2 — Plano institucional (Norma → Falha → Ponte)</h3>
+          <pre><code>Tópico — <b>Em primeira análise</b>, [RECORTE] persiste entre [PÚBLICO] porque a aplicação de <b>[NORMA]</b> não vira entrega regular.
+Prova — <b>Conforme dispõe</b> <b>[NORMA]</b> (ex.: CF/88 art. 165; LDB arts. 2º–3º; Lei 8.080/90 art. 2º; Lei 12.608/2012; ECA arts. 4º, 53–54; Port. 3.088/2011; Prov. CNJ 199/2025), garantir [direito/serviço] com metas e rotinas.
+Explicação — <b>Não obstante</b>, sem meta na LDO e dotação na LOA (art. 165), a política vira ação episódica, <b>de modo que</b> [efeito].
+Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob tal prisma</b>, a vida cotidiana confirma a urgência.</code></pre>
+          <p class="small"><b>Função:</b> causa institucional com base legal + falha de execução. Feche abrindo caminho para o P3.</p>
+        </div>
+        <div class="card">
+          <h3>3.2 P3 — Plano sociocultural (Dado → Impacto → Ponte)</h3>
+          <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>.
+Prova — <b>Segundo</b> [BASE] (ex.: PNAD 2023; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
+Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete.
+Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
+          <p class="small"><b>Função:</b> comprovar a face social com dado oficial e apontar impacto.</p>
+        </div>
+      </div>
+
+      <div class="card small">
+        <h4>3.3 UA-4 — Unidade Argumentativa em 4 passos</h4>
+        <p><b>Tópico</b> → <b>Prova</b> → <b>Explicação</b> → <b>Fecho-ponte</b>. Mantém coesão e evita repetição.</p>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 4) CONCLUSÃO -->
+    <h2 id="c5">4) Conclusão — C5 compacta (duas medidas)</h2>
+    <div class="card">
+      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[INDICADOR]</span> • <span class="chip">[PRAZO]</span> • <span class="chip">[AMBIENTE/SETOR]</span>.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>4.1 Modelo Universal — preencher e colar</h3>
+<pre><code>Síntese — <b>Diante do exposto</b>, a permanência de [RECORTE] entre [PÚBLICO] resulta de falhas de execução e mediações frágeis.
+
+Medida 1 — <b>QUEM</b>: Prefeitura/Secretaria (gestora). <b>O QUÊ</b>: incluir meta na LDO e dotação na LOA. <b>COMO</b>: aplicar <b>[NORMA]</b> + CF/88 art. 165 (PPA-LDO-LOA), com edital anual. <b>PARA QUÊ</b>: entrega contínua. <b>DETALHE</b>: atingir [INDICADOR] em [PRAZO].
+
+Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>: rotina de mediação/acolhimento (rotas, letramento, busca ativa). <b>COMO</b>: operar a mesma <b>[NORMA]</b> com protocolos simples. <b>PARA QUÊ</b>: reduzir barreiras diárias. <b>DETALHE</b>: publicar monitoramento semestral.</code></pre>
+        </div>
+        <div class="card">
+          <h3>4.2 Modelos temáticos (ajuste só as variáveis)</h3>
+          <p class="small"><b>Educação</b> — CF/88 art. 205 + LDB</p>
+          <pre><code>QUEM: Secretaria + escolas. O QUÊ: Núcleos de Letramento. COMO: [NORMA] + art. 165. PARA QUÊ: elevar proficiência. DETALHE: [INDICADOR] até [PRAZO].</code></pre>
+          <p class="small"><b>Saúde/RAPS</b> — 8.080/90 + 8.142/90 + Port. 3.088/2011</p>
+          <pre><code>QUEM: Saúde + UBS + CAPS + CRAS. O QUÊ: linha de cuidado territorial. COMO: [NORMA] + rubrica LOA. PARA QUÊ: reduzir [RECORTE]. DETALHE: queda de [INDICADOR] em [PRAZO].</code></pre>
+          <p class="small"><b>Socioambiental</b> — art. 225 + Lei 12.608</p>
+          <pre><code>QUEM: Prefeitura/Defesa Civil + Educação/Obras. O QUÊ: Plano de Contingência. COMO: [NORMA] + CEMADEN + PRODES. PARA QUÊ: reduzir impactos. DETALHE: [INDICADOR] em [PRAZO].</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 5) PONTES -->
+    <h2 id="pontes">5) Biblioteca de pontes — finalize parágrafos com fluidez</h2>
+    <div class="bridges">
+      <div class="bridge">
+        <div class="label">Fim do P2 → início do P3</div>
+        <div class="phrase">“Logo, norma e orçamento precisam se encontrar; <u>em segunda análise</u>, o cotidiano mostra por quê.”</div>
+      </div>
+      <div class="bridge">
+        <div class="label">Fim do P3 → início da C5</div>
+        <div class="phrase">“Dessarte, saber não basta: é <u>hora de fazer</u> — a seguir, as medidas.”</div>
+      </div>
+      <div class="bridge">
+        <div class="label">Fecho final</div>
+        <div class="phrase">“Ao cabo, lei, orçamento e gente caminham juntos — e o direito sai do papel.”</div>
+      </div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 6) LEIS -->
+    <h2 id="leis">6) Cartões de Leis — prontos para P2/C5</h2>
+    <div class="grid grid-3 small">
+      <div class="card"><h3>CF/88 — arts. 6º e 165</h3><p>Direitos sociais + viabilidade (PPA-LDO-LOA).</p></div>
+      <div class="card"><h3>CF/88 — art. 205 + LDB</h3><p>Educação para cidadania e trabalho.</p></div>
+      <div class="card"><h3>CF/88 — art. 225 + Lei 12.608</h3><p>Ambiente equilibrado + Defesa Civil.</p></div>
+      <div class="card"><h3>Lei 8.080/90 + 8.142/90</h3><p>SUS integral + controle social.</p></div>
+      <div class="card"><h3>ECA — arts. 4º, 53–54</h3><p>Proteção integral e direito à educação.</p></div>
+      <div class="card"><h3>Port. 3.088/2011 (RAPS) + Prov. 199/2025</h3><p>Saúde mental territorial + cidadania documental.</p></div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 7) DADOS -->
+    <h2 id="dados">7) Cartões de Dados — prontos para o P3</h2>
+    <div class="grid grid-2 small">
+      <div class="card"><h3>PNAD (ago/2025)</h3><p><b>Dado:</b> desemprego 5,6%; subutilização 14,1%.</p><p><b>Como usar:</b> pressiona renda/tempo escolar/adesão a serviços.</p></div>
+      <div class="card"><h3>SAEB/IDEB (2023)</h3><p><b>Dado:</b> 9º ano — LP 258,8; Mat 257,1; IDEB 6,0.</p><p><b>Como usar:</b> lacunas de letramento → vulnerabilidade informacional.</p></div>
+      <div class="card"><h3>CEMADEN (2024)</h3><p><b>Dado:</b> 3.620 alertas; 1.690 ocorrências.</p><p><b>Como usar:</b> concentração territorial de risco; educação para risco.</p></div>
+      <div class="card"><h3>PRODES (2024)</h3><p><b>Dado:</b> Amazônia 6.288 km²; Cerrado 8.174 km².</p><p><b>Como usar:</b> pressão ambiental → serviços e abastecimento.</p></div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 8) REFERÊNCIAS CORINGA POR TÓPICO -->
+    <h2 id="refs-coringa">8) Referências coringa por tópico (estatística + Constituição)</h2>
+    <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico-mãe traz: (1) <b>Dado coringa</b> (ano + descrição) e (2) <b>Base constitucional</b> (artigo + aplicação). Ao final, indicamos <b>como usar</b> no texto.</p>
 
     <div class="grid grid-2 small">
       <!-- 1. Direitos sociais & cidadania documental -->
       <div class="card">
         <h3>1) Direitos sociais & cidadania documental</h3>
-        <p><b>Dado coringa (2023):</b> <u>Sub‑registro de nascimento</u> caiu para <b>1,05%</b>, o menor da série desde 2015 — redução contínua e ainda desigual por região. <i>Fonte: IBGE, Estatísticas do Registro Civil 2023</i>.</p>
-        <p><b>Base constitucional:</b> <u>Art. 6º</u> (direitos sociais) + <u>Art. 5º</u> (igualdade) — e <u>Provimento CNJ nº 199/2025</u> para erradicar o sub‑registro, integrando Judiciário e cartórios.</p>
+        <p><b>Dado coringa (2023):</b> <u>Sub-registro de nascimento</u> caiu para <b>1,05%</b>, o menor da série desde 2015 — redução contínua e ainda desigual por região. <i>Fonte: IBGE, Estatísticas do Registro Civil 2023</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 6º</u> (direitos sociais) + <u>Art. 5º</u> (igualdade) — e <u>Provimento CNJ nº 199/2025</u> para erradicar o sub-registro, integrando Judiciário e cartórios.</p>
         <p><b>Como usar:</b> <b>P2</b> âncora em art. 6º + CNJ 199 (fluxo CRAS–Cartório–Escola); <b>P3</b> mostra 1,05% com recorte local; <b>C5</b> prevê mutirões com meta na LDO/LOA (art. 165).</p>
       </div>
 
@@ -442,7 +433,7 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <h3>4) Informação & tecnologia (inclusão digital)</h3>
         <p><b>Dado coringa (2023):</b> Internet em <b>92,5%</b> dos domicílios (72,5 milhões); <b>5,9 milhões</b> seguem desconectados — custo e falta de habilidade lideram as razões. <i>Fonte: PNAD Contínua TIC 2023</i>.</p>
         <p><b>Base constitucional:</b> <u>Art. 5º, XIV</u> (acesso à informação) + <u>Art. 220</u> (comunicação social).</p>
-        <p><b>Como usar:</b> <b>P2</b> invoca 5º/220 para políticas de letramento e infraestrutura; <b>P3</b> usa 92,5% vs. 5,9 mi; <b>C5</b> cria “pontos de wi‑fi” e oficinas com meta de adesão.</p>
+        <p><b>Como usar:</b> <b>P2</b> invoca 5º/220 para políticas de letramento e infraestrutura; <b>P3</b> usa 92,5% vs. 5,9 mi; <b>C5</b> cria “pontos de wi-fi” e oficinas com meta de adesão.</p>
       </div>
 
       <!-- 5. Saúde mental & vulnerabilidades -->
@@ -450,13 +441,13 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <h3>5) Saúde mental & vulnerabilidades</h3>
         <p><b>Dado coringa (2019):</b> <b>10,2%</b> dos adultos (18+) relataram diagnóstico de <u>depressão</u> — cerca de 16,3 milhões de pessoas. <i>Fonte: PNS/IBGE 2019</i>.</p>
         <p><b>Base constitucional:</b> <u>Art. 196</u> (saúde como direito de todos e dever do Estado) — acoplável à <u>Lei 8.080/90</u> e à <u>Port. 3.088/2011</u> (RAPS).</p>
-        <p><b>Como usar:</b> <b>P2</b> ancora em 196 + SUS/RAPS; <b>P3</b> traz 10,2% com recorte de grupo; <b>C5</b> cria linha de cuidado CAPS‑UBS‑escolas com indicador de acesso.</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 196 + SUS/RAPS; <b>P3</b> traz 10,2% com recorte de grupo; <b>C5</b> cria linha de cuidado CAPS-UBS-escolas com indicador de acesso.</p>
       </div>
 
       <!-- 6. Meio ambiente, clima & cidades -->
       <div class="card">
         <h3>6) Meio ambiente, clima & cidades</h3>
-        <p><b>Dado coringa (PRODES 2024):</b> <u>Desmatamento anual</u> — Amazônia <b>6.288 km²</b> (‑30,6%) e Cerrado <b>8.174 km²</b> (‑25,7%).</p>
+        <p><b>Dado coringa (PRODES 2024):</b> <u>Desmatamento anual</u> — Amazônia <b>6.288 km²</b> (-30,6%) e Cerrado <b>8.174 km²</b> (-25,7%).</p>
         <p><b>Base constitucional:</b> <u>Art. 225</u> (meio ambiente equilibrado) + <u>Lei 12.608/2012</u> (Proteção e Defesa Civil).</p>
         <p><b>Como usar:</b> <b>P2</b> ancora em 225 + 12.608 (prevenção e adaptação); <b>P3</b> usa séries do PRODES; <b>C5</b> propõe plano de contingência com indicador de simulados/rotas.</p>
       </div>
@@ -496,7 +487,31 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <div class="pagebreak"></div>
 
-    <!-- 11) TREINO PRÁTICO (mantido) -->
+    <!-- 9) CONECTIVOS -->
+    <h2 id="conn">9) Conectivos humanos — rotação curta</h2>
+    <div class="card small">
+      <p><b>Abertura/ângulo:</b> À luz de; Em chave pública; Diante desse quadro; Sob tal prisma.</p>
+      <p><b>Norma/dado:</b> Conforme dispõe; Nos termos de; Segundo; À luz de.</p>
+      <p><b>Causa/explicação:</b> na medida em que; porquanto; dado que; uma vez que.</p>
+      <p><b>Contraste:</b> entretanto; contudo; não obstante; apesar disso.</p>
+      <p><b>Fecho/ponte:</b> logo; por conseguinte; dessarte; com isso; ao cabo.</p>
+      <p class="muted">Meta: 10–14 conectivos por texto; evite repetir o mesmo conectivo em frases seguidas.</p>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 10) CHECKLIST -->
+    <h2 id="check">10) Checklist final — 30 linhas</h2>
+    <div class="card grid grid-4 small">
+      <div><h4>Introdução</h4><ul><li>Gancho (lei) + cena real</li><li>Tese binária (A/B)</li><li>Ponte para P2/P3</li></ul></div>
+      <div><h4>P2</h4><ul><li>[NORMA] aplicada</li><li>Falha (LDO/LOA ou governança)</li><li>Ponte para a vida real</li></ul></div>
+      <div><h4>P3</h4><ul><li>[BASE] recente</li><li>[IMPACTO] concreto</li><li>Ponte para C5</li></ul></div>
+      <div><h4>Conclusão (C5)</h4><ul><li>Medida 1 + Medida 2</li><li>Mesma [NORMA] do P2</li><li>[INDICADOR] + [PRAZO]</li></ul></div>
+    </div>
+
+    <div class="pagebreak"></div>
+
+    <!-- 11) TREINO PRÁTICO -->
     <h2 id="treino">11) Treino prático — executar</h2>
     <div class="train">
       <p class="muted">Parte prática para aplicar o guia. Leia o tema, use os textos de apoio e rascunhe tese/argumentos e C5 aqui mesmo.</p>
