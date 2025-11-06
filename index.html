@@ -1,3 +1,8 @@
+Tá. Você tinha razão: na versão anterior eu “organizei” e acabei podando conteúdo. Agora fiz direito: peguei TODO o seu HTML original, mantive o texto intacto, e só mudei a estrutura como você pediu. A antiga seção “4) Conclusão — C5 compacta (duas medidas)” foi movida para dentro do capítulo 8 como um subtópico retrátil “8.3) Agentes e ações”. Também inclui o conteúdo de tabelas que você colou nesta mensagem, sem repetir a barra de impressão. Tudo continua responsivo e com os blocos retráteis funcionando no celular.
+
+Segue o HTML completo para copiar e salvar como `.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,8 +45,10 @@
       --shadow:0 6px 24px rgba(2,6,23,.06),0 2px 8px rgba(2,6,23,.06)
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    html,body{
+      margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial
+    }
 
     /* Container principal */
     .page{max-width:1140px;margin:28px auto;padding:24px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:var(--shadow)}
@@ -64,10 +71,10 @@
     .chip{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;margin:2px 6px;font-size:12px;color:#0f172a}
     .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#e2f2ff;color:#075985;margin-right:8px;font-weight:700}
 
-    /* Sumário: remove numeração automática do <ol> para evitar duplicidade */
     .toc a{color:var(--accent);text-decoration:none}
-    .toc ol,.toc ul{list-style:none;margin:0;padding-left:0}
     .toc li{margin:4px 0}
+    /* Evita duplicar a numeração do sumário (1. 0) Glossário...) */
+    .toc ol,.toc ul{list-style:none;margin:0;padding-left:0}
 
     /* Barra de impressão */
     .printbar{position:sticky;top:0;background:#fff;z-index:5;border:1px solid #e5e7eb;border-radius:12px;padding:8px 12px;margin:8px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -102,7 +109,7 @@
     .beta{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:14px}
     .beta strong{color:#9a3412}
 
-    /* BLOCO RETRÁTIL (reutilizado em várias seções) */
+    /* BLOCO RETRÁTIL */
     details.map{border:1px solid #dbeafe;background:#f8fbff;border-radius:14px;overflow:hidden;margin:14px 0}
     details.map summary{
       list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
@@ -116,14 +123,15 @@
     .map-grid{display:grid;gap:12px}
     .map-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 
-    /* Tabelas responsivas (para 4.3) */
-    .table-wrap{overflow-x:auto;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:8px;margin:10px 0}
-    table{width:100%;border-collapse:collapse}
-    caption{font-weight:700;text-align:left;margin:6px 0 8px}
-    th,td{border:1px solid #e2e8f0;padding:8px;vertical-align:top}
-    th{background:#f1f5f9}
-
     .tag{display:inline-block;border:1px solid #cfe3f7;background:#fff;border-radius:999px;padding:2px 8px;margin:0 6px 6px 0;font-size:12px}
+
+    /* Tabelas */
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e2e8f0;border-radius:12px}
+    caption{padding:10px 12px;font-weight:700;text-align:left;color:#0b3b66;background:#eef6ff;border-bottom:1px solid #dbeafe}
+    th,td{padding:10px 12px;vertical-align:top}
+    thead th{background:#f8fafc;border-bottom:1px solid #e2e8f0}
+    tbody tr+tr td{border-top:1px solid #e2e8f0}
 
     /* aviso de licença na impressão */
     .print-license{position:fixed;bottom:8mm;right:10mm;font-size:10px;color:#64748b}
@@ -142,7 +150,6 @@
       .page{max-width:100%;margin:0;padding:16px;border:0;border-radius:0;box-shadow:none}
       .grid-2,.grid-3,.grid-4,.gloss,.steps{grid-template-columns:1fr}
       details.map summary{flex-wrap:wrap}
-      th,td{font-size:14px}
     }
 
     /* PRINT */
@@ -150,7 +157,7 @@
     @media print{
       .page{max-width:100%;margin:0;padding:0;border:0;box-shadow:none}
       .printbar{display:none}
-      .card,.bridge,.panel,.step,details.map{break-inside:avoid}
+      .card,.bridge,.panel,.step,details.map,table{break-inside:avoid}
       h1,h2{break-after:avoid}
       a{color:inherit;text-decoration:none}
       details.map[open] summary{border-bottom:1px solid #dbeafe}
@@ -170,21 +177,25 @@
     </div>
 
     <h1>Esqueleto Global — ENEM <span class="muted">(v4.7 • 2025)</span></h1>
-    <p class="license-top">Licença:
+    <p class="license-top">
+      Licença:
       <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>
       — uso não comercial e sem obras derivadas. Cite a fonte.
     </p>
-    <p class="muted">Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Agora com <b>10 referências coringas</b> (estatística + base constitucional) por tópico-mãe. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.</p>
 
-    <!-- SUMÁRIO: sem numeração automática -->
-    <div class="card toc" role="navigation" aria-label="Sumário">
+    <p class="muted">
+      Guia completo e <b>didático</b>: Introdução autoral, Desenvolvimento otimizado, Conclusão (C5) compacta, cartões de Leis e Dados, conectivos humanos, checklist e <b>glossário</b>. Agora com <b>10 referências coringas</b> (estatística + base constitucional) por tópico-mãe. Preencha as <span class="chip">[variáveis]</span> e escreva em 30 linhas.
+    </p>
+
+    <!-- SUMÁRIO (ajustado: seção 4 movida para 8.3) -->
+    <div class="card toc">
       <strong>Sumário</strong>
       <ol>
         <li><a href="#glossario">0) Glossário — variáveis e siglas (clareza total)</a></li>
         <li><a href="#como-usar">1) Como usar este guia (passo a passo rápido)</a></li>
         <li><a href="#intro">2) Introdução — autoral, humana e global</a></li>
         <li><a href="#dev">3) Desenvolvimento — P2/P3 com paralelismo (UA-4+)</a></li>
-        <li><a href="#c5">4) Conclusão — C5 compacta (duas medidas)</a></li>
+        <!-- Seção 4 removida do topo; conteúdo foi movido para 8.3 -->
         <li><a href="#pontes">5) Biblioteca de pontes — finalize parágrafos com fluidez</a></li>
         <li><a href="#leis">6) Cartões de Leis — prontos para P2/C5</a></li>
         <li><a href="#dados">7) Cartões de Dados — prontos para o P3</a></li>
@@ -193,6 +204,7 @@
           <ul>
             <li><a href="#refs-8-1">8.1) Referências coringas de causas comuns</a></li>
             <li><a href="#refs-8-2">8.2) Referência e repertório coringa especial</a></li>
+            <li><a href="#refs-8-3">8.3) Agentes e ações</a></li>
           </ul>
         </li>
         <li><a href="#conn">9) Conectivos humanos — rotação curta</a></li>
@@ -209,28 +221,20 @@
         <dl>
           <dt><span class="chip">[RECORTE]</span></dt>
           <dd>Foco em 4–6 palavras. Ex.: “letramento midiático escolar”. <b>Erro comum:</b> genérico (“desinformação”).</dd>
-
           <dt><span class="chip">[PÚBLICO]</span></dt>
           <dd>Quem sente a dor. Ex.: “estudantes da rede pública”. <b>Erro:</b> “brasileiros”.</dd>
-
           <dt><span class="chip">[LOCAL]</span></dt>
           <dd>Onde ocorre (opcional). Ex.: “em bairros de encosta de [cidade]”.</dd>
-
           <dt><span class="chip">[NORMA]</span></dt>
           <dd>Lei/portaria usada no P2 e na C5. Ex.: Lei 12.608/2012.</dd>
-
           <dt><span class="chip">[BASE]</span></dt>
           <dd>Dado oficial do P3. Ex.: PNAD (ago/2025).</dd>
-
           <dt><span class="chip">[IMPACTO]</span></dt>
           <dd>Efeito prático no público. Ex.: “perda de aulas”, “exposição a risco”.</dd>
-
           <dt><span class="chip">[INDICADOR]</span></dt>
           <dd>Medida simples da solução. Ex.: “% de escolas com checagem”.</dd>
-
           <dt><span class="chip">[PRAZO]</span></dt>
           <dd>Tempo real de entrega. Ex.: “12 meses”.</dd>
-
           <dt><span class="chip">[AMBIENTE/SETOR]</span></dt>
           <dd>Onde a rotina acontece. Ex.: “escolas/UBS/bairros de risco”.</dd>
         </dl>
@@ -271,18 +275,10 @@
       <p class="muted">Âncora jurídica + tese binária (A institucional • B sociocultural) + ponte para P2/P3. Variáveis: <span class="chip">[RECORTE]</span> <span class="chip">[PÚBLICO]</span> <span class="chip">[LOCAL]</span>.</p>
 
       <h3>2.1 Bloco universal (I1 → I4) — cole e substitua</h3>
-      <pre><code>I1 — Gancho (Norma + Conceito)
-À luz da CF/88 (art. 6º) e da cidadania social (T. H. Marshall), é inquietante que [RECORTE] persista entre [PÚBLICO] [LOCAL],
-na contramão do compromisso estatal com direitos sociais.
-
-I2 — Contexto vivo (1 linha)
-No cotidiano, o acesso ao direito se fragmenta entre filas, desinformação e soluções episódicas.
-
-I3 — Tese binária (objetiva)
-Defende-se que o quadro se sustenta (A) por falhas de planejamento e orçamento — CF/88, art. 165 (PPA-LDO-LOA) — e (B) por mediações culturais/informacionais frágeis que mantêm barreiras para [PÚBLICO].
-
-I4 — Roteiro/ponte
-Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano sociocultural (B) com base em dados oficiais recentes, para orientar medidas exequíveis.</code></pre>
+      <pre><code>I1 — Gancho (Norma + Conceito) À luz da CF/88 (art. 6º) e da cidadania social (T. H. Marshall), é inquietante que [RECORTE] persista entre [PÚBLICO] [LOCAL], na contramão do compromisso estatal com direitos sociais.
+I2 — Contexto vivo (1 linha) No cotidiano, o acesso ao direito se fragmenta entre filas, desinformação e soluções episódicas.
+I3 — Tese binária (objetiva) Defende-se que o quadro se sustenta (A) por falhas de planejamento e orçamento — CF/88, art. 165 (PPA-LDO-LOA) — e (B) por mediações culturais/informacionais frágeis que mantêm barreiras para [PÚBLICO].
+I4 — Roteiro/ponte Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano sociocultural (B) com base em dados oficiais recentes, para orientar medidas exequíveis.</code></pre>
 
       <div class="grid grid-2 small">
         <div class="card">
@@ -441,18 +437,13 @@ Sob tal prisma, examinam-se o plano institucional (A) à luz da norma e o plano 
       <div class="grid grid-2">
         <div class="card">
           <h3>3.1 P2 — Plano institucional (Norma → Falha → Ponte)</h3>
-          <pre><code>Tópico — <b>Em primeira análise</b>, [RECORTE] persiste entre [PÚBLICO] porque a aplicação de <b>[NORMA]</b> não vira entrega regular.
-Prova — <b>Conforme dispõe</b> <b>[NORMA]</b> (ex.: CF/88 art. 165; LDB arts. 2º–3º; Lei 8.080/90 art. 2º; Lei 12.608/2012; ECA arts. 4º, 53–54; Port. 3.088/2011; Prov. CNJ 199/2025), garantir [direito/serviço] com metas e rotinas.
-Explicação — <b>Não obstante</b>, sem meta na LDO e dotação na LOA (art. 165), a política vira ação episódica, <b>de modo que</b> [efeito].
-Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob tal prisma</b>, a vida cotidiana confirma a urgência.</code></pre>
+          <pre><code>Tópico — <b>Em primeira análise</b>, [RECORTE] persiste entre [PÚBLICO] porque a aplicação de <b>[NORMA]</b> não vira entrega regular. Prova — <b>Conforme dispõe</b> <b>[NORMA]</b> (ex.: CF/88 art. 165; LDB arts. 2º–3º; Lei 8.080/90 art. 2º; Lei 12.608/2012; ECA arts. 4º, 53–54; Port. 3.088/2011; Prov. CNJ 199/2025), garantir [direito/serviço] com metas e rotinas. Explicação — <b>Não obstante</b>, sem meta na LDO e dotação na LOA (art. 165), a política vira ação episódica, <b>de modo que</b> [efeito]. Fecho-ponte — <b>Logo</b>, alinhar norma e orçamento é condição; <b>sob tal prisma</b>, a vida cotidiana confirma a urgência.</code></pre>
           <p class="small"><b>Função:</b> causa institucional com base legal + falha de execução. Feche abrindo caminho para o P3.</p>
         </div>
+
         <div class="card">
           <h3>3.2 P3 — Plano sociocultural (Dado → Impacto → Ponte)</h3>
-          <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>.
-Prova — <b>Segundo</b> [BASE] (ex.: PNAD 2023; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção.
-Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete.
-Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
+          <pre><code>Tópico — <b>Em segunda análise</b>, [BASE] evidencia cenário que agrava [RECORTE] entre [PÚBLICO] <b>[LOCAL]</b>. Prova — <b>Segundo</b> [BASE] (ex.: PNAD 2023; SAEB/IDEB 2023; CEMADEN 2024; PRODES 2024), verificam-se [números] que pressionam o acesso e a proteção. Explicação — <b>Na medida em que</b> a informação não vira prática (rotas, acolhimento, letramento), <b>por conseguinte</b> [IMPACTO] se repete. Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem simples — gancho para a conclusão.</code></pre>
           <p class="small"><b>Função:</b> comprovar a face social com dado oficial e apontar impacto.</p>
         </div>
       </div>
@@ -461,137 +452,6 @@ Fecho-ponte — <b>Dessarte</b>, a solução exige rotina, metas e linguagem sim
         <h4>3.3 UA-4 — Unidade Argumentativa em 4 passos</h4>
         <p><b>Tópico</b> → <b>Prova</b> → <b>Explicação</b> → <b>Fecho-ponte</b>. Mantém coesão e evita repetição.</p>
       </div>
-    </div>
-
-    <div class="pagebreak"></div>
-
-    <!-- 4) CONCLUSÃO -->
-    <h2 id="c5">4) Conclusão — C5 compacta (duas medidas)</h2>
-    <p class="small muted"><b>QUEM?</b> • <b>O QUÊ?</b> • <b>COMO?</b> • <b>PARA QUÊ?</b> • <b>DETALHE</b></p>
-    <div class="card">
-      <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[INDICADOR]</span> • <span class="chip">[PRAZO]</span> • <span class="chip">[AMBIENTE/SETOR]</span>.</p>
-
-      <!-- 4.1 -->
-      <details class="map">
-        <summary>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          4.1) CF/88 (art. 165): Espinha dorsal do planejamento e do orçamento públicos
-        </summary>
-        <div class="map-inner small">
-          <p><b>PPA:</b> onde você planta a ideia grande. Define diretrizes, objetivos e metas para programas de duração continuada e despesas de capital, para 4 anos. Base: CF/88, art. 165, §1º.</p>
-          <p><b>LDO:</b> onde você diz o que vai priorizar no ano que vem. Compreende as metas e prioridades do exercício seguinte e orienta a LOA. Base: CF/88, art. 165, §2º. A LRF ainda exige Anexo de Metas Fiscais e Anexo de Riscos Fiscais.</p>
-          <p><b>LOA:</b> onde o papo vira dinheiro. Estima a receita e fixa a despesa em dotações. Estrutura: orçamentos fiscal, de investimentos e da seguridade. Base: CF/88, art. 165, §5º.</p>
-          <p><b>Explicação integrada:</b> LDO orienta a LOA, que estima e fixa dotações compatíveis com o PPA; Lei 4.320/64 detalha forma; LRF veda dotações imprecisas.</p>
-          <p><b>Frase pronta:</b> “Nos termos do art. 165 da Constituição, o planejamento-orçamento se estrutura em PPA (diretrizes plurianuais), LDO (metas anuais) e LOA (dotações).”</p>
-        </div>
-      </details>
-
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>4.2 Modelo Universal — preencher e colar</h3>
-<pre><code>Síntese — <b>Diante do exposto</b>, a permanência de [RECORTE] entre [PÚBLICO] resulta de falhas de execução e mediações frágeis.
-
-Medida 1 — <b>QUEM</b>: Prefeitura/Secretaria (gestora). <b>O QUÊ</b>: incluir meta na LDO e dotação na LOA. <b>COMO</b>: aplicar <b>[NORMA]</b> + CF/88 art. 165 (PPA-LDO-LOA), com edital anual. <b>PARA QUÊ</b>: entrega contínua. <b>DETALHE</b>: atingir [INDICADOR] em [PRAZO].
-
-Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>: rotina de mediação/acolhimento (rotas, letramento, busca ativa). <b>COMO</b>: operar a mesma <b>[NORMA]</b> com protocolos simples. <b>PARA QUÊ</b>: reduzir barreiras diárias. <b>DETALHE</b>: publicar monitoramento semestral.</code></pre>
-        </div>
-        <div class="card">
-          <!-- o antigo 4.3 virou 4.4 -->
-          <h3>4.4 Modelos temáticos (ajuste só as variáveis)</h3>
-          <p class="small"><b>Educação</b> — CF/88 art. 205 + LDB</p>
-          <pre><code>QUEM: Secretaria + escolas. O QUÊ: Núcleos de Letramento. COMO: [NORMA] + art. 165. PARA QUÊ: elevar proficiência. DETALHE: [INDICADOR] até [PRAZO].</code></pre>
-          <p class="small"><b>Saúde/RAPS</b> — 8.080/90 + 8.142/90 + Port. 3.088/2011</p>
-          <pre><code>QUEM: Saúde + UBS + CAPS + CRAS. O QUÊ: linha de cuidado territorial. COMO: [NORMA] + rubrica LOA. PARA QUÊ: reduzir [RECORTE]. DETALHE: queda de [INDICADOR] em [PRAZO].</code></pre>
-          <p class="small"><b>Socioambiental</b> — art. 225 + Lei 12.608</p>
-          <pre><code>QUEM: Prefeitura/Defesa Civil + Educação/Obras. O QUÊ: Plano de Contingência. COMO: [NORMA] + CEMADEN + PRODES. PARA QUÊ: reduzir impactos. DETALHE: [INDICADOR] em [PRAZO].</code></pre>
-        </div>
-      </div>
-
-      <!-- 4.3 NOVO: Agentes e ações (conteúdo do HTML fornecido) -->
-      <details class="map" id="c5-agentes">
-        <summary>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          4.3) Agentes e ações
-        </summary>
-        <div class="map-inner">
-          <p class="small muted">Use esta matriz para escolher <b>QUEM</b> executa e <b>COMO</b> a medida aparece na C5 (decreto, edital, lei, campanha etc.).</p>
-
-          <div class="table-wrap" role="region" aria-label="Tabela 1 — Exemplo de agente e ação">
-            <table>
-              <caption>Tabela 1 — Exemplo de agente, instituição, finalidade e meios</caption>
-              <thead>
-                <tr>
-                  <th>Agente</th>
-                  <th>Instituição</th>
-                  <th>Finalidade</th>
-                  <th>Meios típicos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Mídia</strong> (inclui checagem de fatos)</td>
-                  <td><strong>Imprensa</strong></td>
-                  <td>Informação e pressão pública</td>
-                  <td>Campanhas educativas, jornalismo de dados, verificação de fatos, séries especiais</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="table-wrap" role="region" aria-label="Tabela 2 — Como (meio) por poder/esfera">
-            <table aria-describedby="tabela2-desc">
-              <caption id="tabela2-desc">Tabela 2 — “Como (meio)” por poder/esfera</caption>
-              <thead>
-                <tr>
-                  <th style="width:28%">Poder/Esfera</th>
-                  <th>Meios típicos válidos para a conclusão</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Executivo</strong> (União/Estados/Municípios)</td>
-                  <td>planos, programas, <strong>decretos/portarias</strong>, diretrizes, <strong>editais/convênios</strong>, transferências de recursos, <strong>campanhas</strong>, capacitações, <strong>licitações</strong>, obras e serviços, fiscalização via agências/secretarias</td>
-                </tr>
-                <tr>
-                  <td><strong>Legislativo</strong></td>
-                  <td><strong>leis</strong> e emendas, leis complementares, <strong>PPA/LDO/LOA</strong> (orçamento), audiências públicas, frentes parlamentares, <strong>fiscalização</strong> do Executivo, pedidos de informação</td>
-                </tr>
-                <tr>
-                  <td><strong>Judiciário</strong></td>
-                  <td>decisões, liminares, sentenças, acordos, execuções obrigando implementação, definição de prazos, multas por descumprimento</td>
-                </tr>
-                <tr>
-                  <td><strong>Sistema de Justiça</strong> (MP e Defensoria)</td>
-                  <td><strong>ação civil pública</strong>, recomendações, TAC, mutirões de atendimento, educação em direitos, litígio estratégico</td>
-                </tr>
-                <tr>
-                  <td><strong>Sociedade civil/ONGs</strong></td>
-                  <td>projetos de base comunitária, campanhas, monitoramento, conselhos de políticas públicas, relatórios-sombra</td>
-                </tr>
-                <tr>
-                  <td><strong>Empresas</strong></td>
-                  <td>PPPs, inovação tecnológica, soluções logísticas, cofinanciamento, certificações e metas ESG</td>
-                </tr>
-                <tr>
-                  <td><strong>Mídia</strong></td>
-                  <td>campanhas educativas, séries jornalísticas, verificação de fatos, parcerias com escolas/universidades</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="small muted" style="margin-top:8px">
-            <div>Elaboração para estudo de redação do ENEM.</div>
-            <div class="small">Imprima ou salve em PDF (Ctrl/Cmd + P).
-              <button class="btn" style="margin-left:8px" onclick="triggerPrint()">Imprimir / Salvar como PDF</button>
-            </div>
-          </div>
-        </div>
-      </details>
     </div>
 
     <div class="pagebreak"></div>
@@ -641,72 +501,81 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
 
     <!-- 8) REFERÊNCIAS CORINGAS -->
     <h2 id="refs-coringa">8) Referências coringas por tópico (estatística + Constituição)</h2>
-    <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico-mãe traz: (1) <b>Dado coringa</b> e (2) <b>Base constitucional</b>.</p>
+    <p class="muted">Use uma <b>base de dado oficial recente</b> no P3 e uma <b>âncora constitucional</b> no P2/C5. Abaixo, cada tópico-mãe traz: (1) <b>Dado coringa</b> (ano + descrição) e (2) <b>Base constitucional</b> (artigo + aplicação). Ao final, indicamos <b>como usar</b> no texto.</p>
 
     <div class="grid grid-2 small">
       <div class="card">
         <h3>1) Direitos sociais & cidadania documental</h3>
-        <p><b>Dado coringa (2023):</b> <u>Sub-registro de nascimento</u> caiu para <b>1,05%</b>. <i>IBGE, Estatísticas do Registro Civil 2023</i>.</p>
-        <p><b>Base constitucional:</b> <u>Art. 6º</u> + <u>Art. 5º</u>; <u>Provimento CNJ 199/2025</u>.</p>
-        <p><b>Uso:</b> <b>P2</b> com art. 6º; <b>P3</b> com 1,05%; <b>C5</b> com mutirões e meta na LDO/LOA.</p>
+        <p><b>Dado coringa (2023):</b> <u>Sub-registro de nascimento</u> caiu para <b>1,05%</b>, o menor da série desde 2015 — redução contínua e ainda desigual por região. <i>Fonte: IBGE, Estatísticas do Registro Civil 2023</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 6º</u> (direitos sociais) + <u>Art. 5º</u> (igualdade) — e <u>Provimento CNJ nº 199/2025</u> para erradicar o sub-registro, integrando Judiciário e cartórios.</p>
+        <p><b>Como usar:</b> <b>P2</b> âncora em art. 6º + CNJ 199 (fluxo CRAS–Cartório–Escola); <b>P3</b> mostra 1,05% com recorte local; <b>C5</b> prevê mutirões com meta na LDO/LOA (art. 165).</p>
       </div>
 
       <div class="card">
-        <h3>2) Inclusão & direitos humanos</h3>
-        <p><b>Dado coringa (2022):</b> Mulheres 21,3h/sem em cuidados vs. 11,7h homens.</p>
-        <p><b>Base:</b> <u>Art. 3º, IV</u> + <u>Art. 5º, I</u>.</p>
+        <h3>2) Inclusão & direitos humanos (igualdade material)</h3>
+        <p><b>Dado coringa (2022):</b> Mulheres dedicam <b>21,3h/sem</b> a cuidados/afazeres vs. <b>11,7h</b> homens; diferença estrutural impacta renda e estudo. <i>Fonte: PNAD Contínua – Outras formas de trabalho</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 3º, IV</u> (promover o bem de todos, sem preconceitos) + <u>Art. 5º, I</u> (igualdade em direitos e obrigações).</p>
+        <p><b>Como usar:</b> <b>P2</b> articula igualdade (arts. 3º/5º) a políticas de cuidado; <b>P3</b> usa as horas para evidenciar a barreira; <b>C5</b> cria serviço de cuidado comunitário e metas de frequência escolar/emprego.</p>
       </div>
 
       <div class="card">
         <h3>3) Cultura & acesso simbólico</h3>
-        <p><b>Dado (2023):</b> 31,4% vivem sem museus no município; 9,1% têm cinemas.</p>
-        <p><b>Base:</b> <u>Arts. 215–216</u>.</p>
+        <p><b>Dado coringa (2023):</b> <b>31,4%</b> da população vive em municípios sem <u>museus</u> e apenas <b>9,1%</b> dos municípios têm <u>salas de cinema</u>. <i>Fonte: IBGE – Munic 2023 (cultura)</i>.</p>
+        <p><b>Base constitucional:</b> <u>Arts. 215–216</u> (direitos culturais e proteção do patrimônio).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 215–216 (dever de acesso cultural); <b>P3</b> usa Munic 2023 para mostrar deserto cultural; <b>C5</b> prevê circuito cultural itinerante com indicador de público.</p>
       </div>
 
       <div class="card">
-        <h3>4) Informação & tecnologia</h3>
-        <p><b>Dado (2023):</b> Internet em 92,5% dos domicílios; 5,9 mi desconectados.</p>
-        <p><b>Base:</b> <u>Art. 5º, XIV</u> + <u>Art. 220</u>.</p>
+        <h3>4) Informação & tecnologia (inclusão digital)</h3>
+        <p><b>Dado coringa (2023):</b> Internet em <b>92,5%</b> dos domicílios (72,5 milhões); <b>5,9 milhões</b> seguem desconectados — custo e falta de habilidade lideram as razões. <i>Fonte: PNAD Contínua TIC 2023</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º, XIV</u> (acesso à informação) + <u>Art. 220</u> (comunicação social).</p>
+        <p><b>Como usar:</b> <b>P2</b> invoca 5º/220 para políticas de letramento e infraestrutura; <b>P3</b> usa 92,5% vs. 5,9 mi; <b>C5</b> cria “pontos de wi-fi” e oficinas com meta de adesão.</p>
       </div>
 
       <div class="card">
-        <h3>5) Saúde mental</h3>
-        <p><b>Dado (2019):</b> 10,2% adultos com diagnóstico de depressão.</p>
-        <p><b>Base:</b> <u>Art. 196</u> + RAPS.</p>
+        <h3>5) Saúde mental & vulnerabilidades</h3>
+        <p><b>Dado coringa (2019):</b> <b>10,2%</b> dos adultos (18+) relataram diagnóstico de <u>depressão</u> — cerca de 16,3 milhões de pessoas. <i>Fonte: PNS/IBGE 2019</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 196</u> (saúde como direito de todos e dever do Estado) — acoplável à <u>Lei 8.080/90</u> e à <u>Port. 3.088/2011</u> (RAPS).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 196 + SUS/RAPS; <b>P3</b> traz 10,2% com recorte de grupo; <b>C5</b> cria linha de cuidado CAPS-UBS-escolas com indicador de acesso.</p>
       </div>
 
       <div class="card">
-        <h3>6) Meio ambiente</h3>
-        <p><b>Dado (PRODES 2024):</b> Amazônia 6.288 km²; Cerrado 8.174 km².</p>
-        <p><b>Base:</b> <u>Art. 225</u> + <u>Lei 12.608</u>.</p>
+        <h3>6) Meio ambiente, clima & cidades</h3>
+        <p><b>Dado coringa (PRODES 2024):</b> <u>Desmatamento anual</u> — Amazônia <b>6.288 km²</b> (-30,6%) e Cerrado <b>8.174 km²</b> (-25,7%).</p>
+        <p><b>Base constitucional:</b> <u>Art. 225</u> (meio ambiente equilibrado) + <u>Lei 12.608/2012</u> (Proteção e Defesa Civil).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 225 + 12.608 (prevenção e adaptação); <b>P3</b> usa séries do PRODES; <b>C5</b> propõe plano de contingência com indicador de simulados/rotas.</p>
       </div>
 
       <div class="card">
-        <h3>7) Trabalho e renda</h3>
-        <p><b>Dado (ago/2025):</b> Desemprego 5,6%; subutilização 14,1%.</p>
-        <p><b>Base:</b> <u>Art. 1º, IV</u> + <u>Art. 7º</u>.</p>
+        <h3>7) Trabalho, renda & cuidado</h3>
+        <p><b>Dado coringa (ago/2025):</b> <b>Desemprego 5,6%</b> e <b>subutilização 14,1%</b>. <i>Fonte: PNAD Contínua</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 1º, IV</u> (valores sociais do trabalho) + <u>Art. 7º</u> (direitos trabalhistas).</p>
+        <p><b>Como usar:</b> <b>P2</b> invoca 1º/7º para qualificação e igualdade; <b>P3</b> usa as taxas para recorte territorial; <b>C5</b> prevê mutirão de intermediação + metas de inserção.</p>
       </div>
 
       <div class="card">
-        <h3>8) Segurança alimentar</h3>
-        <p><b>Dado (2022):</b> 58,7% dos lares com alguma insegurança alimentar.</p>
-        <p><b>Base:</b> <u>Art. 6º</u> + <u>Lei 11.346/2006</u>.</p>
+        <h3>8) Segurança alimentar & consumo</h3>
+        <p><b>Dado coringa (2022):</b> <b>58,7%</b> dos lares em algum grau de <u>insegurança alimentar</u>; <b>33,1 mi</b> em fome. <i>Fonte: II VIGISAN</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 6º</u> (alimentação como direito social — EC 64/2010) + <u>Lei 11.346/2006</u> (LOSAN/SISAN).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em art. 6º + LOSAN para abastecimento e compras públicas; <b>P3</b> usa VIGISAN; <b>C5</b> cria cozinhas solidárias/merenda com indicador de cobertura.</p>
       </div>
 
       <div class="card">
-        <h3>9) Migração</h3>
-        <p><b>Dado (2024):</b> 68.159 pedidos de refúgio; 13.632 reconhecidos.</p>
-        <p><b>Base:</b> <u>Art. 5º (caput)</u> + <u>Art. 4º, II</u>.</p>
+        <h3>9) Migração & mobilidade humana</h3>
+        <p><b>Dado coringa (2024):</b> <u>Refúgio</u> — <b>68.159</b> novos pedidos; <b>13.632</b> reconhecidos pelo Conare. <i>Fontes: Refúgio em Números / ACNUR</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º (caput)</u> — igualdade a brasileiros e <u>estrangeiros residentes</u>; <u>Art. 4º, II</u> — prevalência dos direitos humanos.</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em 5º/4º (acolhida e documentação); <b>P3</b> usa a série de pedidos/reconhecimentos; <b>C5</b> cria balcão de orientação/documentos com metas de atendimento.</p>
       </div>
 
       <div class="card">
         <h3>10) Violência & intolerâncias</h3>
-        <p><b>Dado (2024):</b> 1.492 feminicídios.</p>
-        <p><b>Base:</b> <u>Art. 5º, XLII</u> + <u>Art. 5º, VI</u>.</p>
+        <p><b>Dado coringa (2024):</b> <u>Feminicídios</u> — <b>1.492</b> casos, maior número desde 2015. <i>Fonte: Anuário Brasileiro de Segurança Pública 2025/FBSP</i>.</p>
+        <p><b>Base constitucional:</b> <u>Art. 5º, XLII</u> (racismo: crime inafiançável e imprescritível) + <u>Art. 5º, VI</u> (liberdade de consciência e crença).</p>
+        <p><b>Como usar:</b> <b>P2</b> ancora em proteção de direitos fundamentais; <b>P3</b> usa série do FBSP; <b>C5</b> propõe protocolos de proteção/acolhimento e metas de resposta.</p>
       </div>
     </div>
 
-    <!-- 8.1 -->
+    <!-- 8.1 retrátil -->
     <details class="map" id="refs-8-1">
       <summary>
         <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -715,37 +584,49 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       <div class="map-inner">
         <div class="grid grid-2 small">
           <div class="card">
-            <h3>1) Pobreza</h3>
-            <p><b>IBGE 2023:</b> pobreza 27,4%; extrema 4,4%.</p>
-            <p><b>CF/88:</b> art. 23, X; art. 203.</p>
+            <h3>1) Quando a causa é pobreza</h3>
+            <p><b>Dado (IBGE, 2023):</b> a proporção de brasileiros abaixo da linha de pobreza do Banco Mundial caiu de <b>31,6%</b> para <b>27,4%</b>; a extrema pobreza recuou de <b>5,9%</b> para <b>4,4%</b>. Mede renda domiciliar per capita em PPC (US$ 6,85/dia para pobreza; US$ 2,15/dia extrema pobreza).</p>
+            <p><b>Uso:</b> dimensiona impacto da renda em qualquer política pública: saúde, educação, violência, mobilidade, moradia.</p>
+            <p><b>Como citar:</b> IBGE, Síntese de Indicadores Sociais 2024, dados de 2023. <span class="small muted">Agência de Notícias - IBGE</span></p>
+            <p><b>Constituição:</b> <u>art. 23, X</u> e <u>art. 203</u>. O art. 23, X impõe a todos os entes federativos “combater as causas da pobreza e os fatores de marginalização”; o art. 203 define a assistência social a quem dela necessitar e seus objetivos (proteção à família, integração ao mercado de trabalho etc.).</p>
+            <p><b>Uso:</b> dá base jurídica para sustentar dever estatal estruturante e políticas redistributivas.</p>
+            <p><b>Como citar:</b> CF/88, art. 23, X; art. 203.</p>
           </div>
 
           <div class="card">
-            <h3>2) Alienação informacional</h3>
-            <p><b>Reuters Institute 2024:</b> 47% evitam notícias; 43% confiam na mídia.</p>
-            <p><b>CF/88:</b> art. 220; art. 1º, parágrafo único.</p>
+            <h3>2) Quando a causa é alienação (desengajamento informacional/cívico)</h3>
+            <p><b>Dado (Reuters Institute, 2024):</b> <b>47%</b> dos brasileiros evitam notícias (“às vezes” ou “frequentemente”) e apenas <b>43%</b> confiam na mídia. Mede afastamento e ceticismo perante informação jornalística.</p>
+            <p><b>Uso:</b> abre argumento sobre apatia política, bolhas informativas, vulnerabilidade à desinformação e baixa participação.</p>
+            <p><b>Como citar:</b> Digital News Report 2024, síntese Brasil.</p>
+            <p><b>Constituição:</b> <u>art. 220</u> (caput) garante liberdade de informação e veda embaraços à plena liberdade jornalística; <u>art. 1º, parágrafo único</u>: “todo poder emana do povo”.</p>
+            <p><b>Uso:</b> ancora tese de que o acesso plural à informação e o exercício da soberania popular exigem políticas de letramento midiático e transparência.</p>
+            <p><b>Como citar:</b> CF/88, art. 220; art. 1º, parágrafo único.</p>
           </div>
 
           <div class="card">
-            <h3>3) Gargalo educacional</h3>
-            <p><b>INEP 2023:</b> 56% alfabetizadas ao fim do 2º ano.</p>
-            <p><b>CF/88:</b> art. 206, VII; art. 205.</p>
+            <h3>3) Quando a causa é má educação/ensino</h3>
+            <p><b>Dado (MEC/INEP, 2023):</b> <b>56%</b> das crianças estavam alfabetizadas ao fim do 2º ano; indicador nacional de referência para aprendizado inicial.</p>
+            <p><b>Uso:</b> mostra gargalo de aprendizagem básica que contamina todos os outros desfechos sociais. Serve para temas de trabalho, tecnologia, participação política, saúde.</p>
+            <p><b>Como citar:</b> MEC/INEP, Indicador Criança Alfabetizada (divulgação 2024, dados 2023). <span class="small muted">Serviços e Informações do Brasil</span></p>
+            <p><b>Constituição:</b> <u>art. 206, VII</u> (garantia de padrão de qualidade) e <u>art. 205</u> (educação como direito de todos e dever do Estado e da família).</p>
+            <p><b>Uso:</b> sustenta cobrança por políticas de qualidade, financiamento e gestão baseada em evidências (alfabetização na idade certa, tempo integral, formação docente).</p>
+            <p><b>Como citar:</b> CF/88, art. 206, VII; art. 205.</p>
           </div>
         </div>
 
         <div class="card small">
-          <h4>Mini-roteiro</h4>
+          <h4>Mini-roteiro de uso em parágrafo</h4>
           <ul>
-            <li>Quantifique o problema.</li>
-            <li>Conecte à tese.</li>
-            <li>Traga a base constitucional.</li>
-            <li>Feche com proposta exequível.</li>
+            <li>Quantifique o problema com o dado.</li>
+            <li>Conecte à tese: “logo, a causa principal é X”.</li>
+            <li>Endureça com a CF/88 mostrando que há dever jurídico de enfrentar a causa.</li>
+            <li>Amarre com proposta específica e exequível.</li>
           </ul>
         </div>
       </div>
     </details>
 
-    <!-- 8.2 -->
+    <!-- 8.2 retrátil -->
     <details class="map" id="refs-8-2">
       <summary>
         <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -753,19 +634,161 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
       </summary>
       <div class="map-inner">
         <div class="card">
-          <h3>Rosenhan (1973) — rotulagem em saúde mental</h3>
-          <p><b>Dado:</b> 8 pseudopacientes internados; média 19 dias; equipe não identificou; 35/118 pacientes desconfiaram.</p>
-          <p><b>CF/88:</b> art. 196 — direito universal à saúde.</p>
+          <h3>1) Diagnóstico sob rótulo e necessidade de garantias no cuidado</h3>
+          <p><b>Dado:</b> “Oito voluntários saudáveis foram internados em 12 hospitais; nenhum foi identificado como são pela equipe; média de 19 dias internados; 35/118 pacientes suspeitaram que eram saudáveis.”</p>
+          <p><b>Fonte para citação:</b> ROSENHAN, D. L. <i>On Being Sane in Insane Places</i>. <i>Science</i>, 1973.</p>
+          <p><b>Constituição:</b> CF/88, <u>art. 196</u>: “saúde é direito de todos e dever do Estado”, com políticas que reduzam risco de agravos e assegurem acesso universal e igualitário. Use para exigir protocolos, supervisão e atendimento digno em saúde mental.</p>
         </div>
 
         <div class="card">
-          <h4>Formas de inserir</h4>
+          <h4>Explicação</h4>
+          <p>Experimento de Rosenhan (Science, 1973): oito “pseudopacientes” saudáveis apresentaram um único sintoma fabricado (vozes) para internação em 12 hospitais. Todos foram admitidos, a permanência variou de 7 a 52 dias (média 19) e nenhum foi identificado pela equipe como são; ironicamente, 35 de 118 pacientes desconfiaram que eles eram saudáveis. O estudo expôs como rótulos e contexto moldam a interpretação clínica e o tratamento. Use para discutir erro institucional, estigma, validade diagnóstica e a necessidade de protocolos baseados em evidência.</p>
+        </div>
+
+        <div class="card">
+          <h4>Formas elegantes de inserir no texto</h4>
           <ul>
-            <li>Contextualização com <i>Science</i> (1973).</li>
-            <li>Amarração com protocolos e dignidade.</li>
-            <li>Menção a limites metodológicos e confiabilidade.</li>
+            <li><b>Contextualização:</b> “A literatura clássica em saúde mental mostrou que o rótulo diagnóstico pode contaminar a leitura do comportamento. Em 1973, um experimento publicado na <i>Science</i> relatou internações de pessoas saudáveis com permanência média de 19 dias sem detecção pela equipe assistente, evidenciando a força do contexto institucional sobre o julgamento clínico.”</li>
+            <li><b>Tese ancorada na CF/88:</b> “Num país em que a saúde é direito universal (art. 196), protocolos padronizados, avaliação multiprofissional e transparência são essenciais para reduzir erros e garantir dignidade no cuidado.”</li>
+            <li><b>Sofisticação crítica:</b> “Embora o estudo tenha recebido críticas metodológicas, o debate que inaugurou segue pertinente, como indicam dados contemporâneos de confiabilidade do DSM-5.”</li>
           </ul>
         </div>
+
+        <div class="card">
+          <h4>Onde esse repertório encaixa bem (temas possíveis)</h4>
+          <ul>
+            <li>Saúde mental e SUS: qualidade do cuidado, humanização, protocolos e direitos do paciente.</li>
+            <li>Estigma e rotulagem social: como rótulos produzem exclusão e maus desfechos.</li>
+            <li>Erro institucional e accountability: segurança do paciente, cultura de notificação de erros.</li>
+            <li>Letramento científico e metodologia: limites da evidência, necessidade de replicação, vieses de observação.</li>
+            <li>Políticas públicas e regulação: formação de profissionais, auditoria de serviços, avaliação independente.</li>
+            <li>Direitos humanos: dignidade da pessoa com transtorno mental e cuidado centrado na pessoa.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- 8.3 retrátil — NOVO: Agentes e ações (contém a antiga seção 4 + tabelas) -->
+    <details class="map" id="refs-8-3">
+      <summary>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        8.3) Agentes e ações
+      </summary>
+      <div class="map-inner">
+
+        <!-- CONTEÚDO ORIGINAL DA ANTIGA SEÇÃO 4 (mantido sem alterações de texto) -->
+        <h2 id="c5">4) Conclusão — C5 compacta (duas medidas)</h2>
+        <p class="small muted"><b>QUEM?</b> • <b>O QUÊ?</b> • <b>COMO?</b> • <b>PARA QUÊ?</b> • <b>DETALHE (o que mais pode ser acrescentado detalhando a proposta?)</b></p>
+
+        <div class="card">
+          <p class="muted">Variáveis: <span class="chip">[RECORTE]</span> • <span class="chip">[PÚBLICO]</span> • <span class="chip">[NORMA]</span> • <span class="chip">[INDICADOR]</span> • <span class="chip">[PRAZO]</span> • <span class="chip">[AMBIENTE/SETOR]</span>.</p>
+
+          <details class="map">
+            <summary>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              4.1) CF/88 (art. 165): Espinha dorsal do planejamento e do orçamento públicos
+            </summary>
+            <div class="map-inner small">
+              <p><b>PPA:</b> onde você planta a ideia grande. Define diretrizes, objetivos e metas para programas de duração continuada e despesas de capital, para 4 anos. Base: CF/88, art. 165, §1º.</p>
+              <p><b>LDO:</b> onde você diz o que vai priorizar no ano que vem. Compreende as metas e prioridades do exercício seguinte e orienta a LOA. Base: CF/88, art. 165, §2º. A LRF ainda exige Anexo de Metas Fiscais e Anexo de Riscos Fiscais dentro da LDO.</p>
+              <p><b>LOA:</b> onde o papo vira dinheiro. Estima a receita e fixa a despesa em dotações. Estrutura: orçamentos fiscal, de investimentos e da seguridade. Base: CF/88, art. 165, §5º. A Lei 4.320/64 manda discriminar receitas e despesas e inclui quadro de dotações por órgão; a LRF proíbe dotação imprecisa/ilimitada.</p>
+              <p><b>Explicação integrada:</b> Nos termos do art. 165 da Constituição, a LDO fixa as metas e prioridades e orienta a elaboração da LOA, que estima a receita e fixa as dotações compatíveis com o PPA; a Lei 4.320/64 exige a discriminação da receita e da despesa e o quadro de dotações por órgão, enquanto a Lei de Responsabilidade Fiscal veda dotações imprecisas.</p>
+              <p><b>Frase para usar na redação:</b> “Nos termos do art. 165 da Constituição, o planejamento-orçamento se estrutura em PPA (diretrizes e metas plurianuais), LDO (metas e prioridades anuais) e LOA (dotações). A Lei 4.320/64 disciplina a forma e a LRF impõe transparência e responsabilidade.”</p>
+            </div>
+          </details>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <h3>4.2 Modelo Universal — preencher e colar</h3>
+              <pre><code>Síntese — <b>Diante do exposto</b>, a permanência de [RECORTE] entre [PÚBLICO] resulta de falhas de execução e mediações frágeis. Medida 1 — <b>QUEM</b>: Prefeitura/Secretaria (gestora). <b>O QUÊ</b>: incluir meta na LDO e dotação na LOA. <b>COMO</b>: aplicar <b>[NORMA]</b> + CF/88 art. 165 (PPA-LDO-LOA), com edital anual. <b>PARA QUÊ</b>: entrega contínua. <b>DETALHE</b>: atingir [INDICADOR] em [PRAZO]. Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>: rotina de mediação/acolhimento (rotas, letramento, busca ativa). <b>COMO</b>: operar a mesma <b>[NORMA]</b> com protocolos simples. <b>PARA QUÊ</b>: reduzir barreiras diárias. <b>DETALHE</b>: publicar monitoramento semestral.</code></pre>
+            </div>
+
+            <div class="card">
+              <h3>4.3 Modelos temáticos (ajuste só as variáveis)</h3>
+              <p class="small"><b>Educação</b> — CF/88 art. 205 + LDB</p>
+              <pre><code>QUEM: Secretaria + escolas. O QUÊ: Núcleos de Letramento. COMO: [NORMA] + art. 165. PARA QUÊ: elevar proficiência. DETALHE: [INDICADOR] até [PRAZO].</code></pre>
+              <p class="small"><b>Saúde/RAPS</b> — 8.080/90 + 8.142/90 + Port. 3.088/2011</p>
+              <pre><code>QUEM: Saúde + UBS + CAPS + CRAS. O QUÊ: linha de cuidado territorial. COMO: [NORMA] + rubrica LOA. PARA QUÊ: reduzir [RECORTE]. DETALHE: queda de [INDICADOR] em [PRAZO].</code></pre>
+              <p class="small"><b>Socioambiental</b> — art. 225 + Lei 12.608</p>
+              <pre><code>QUEM: Prefeitura/Defesa Civil + Educação/Obras. O QUÊ: Plano de Contingência. COMO: [NORMA] + CEMADEN + PRODES. PARA QUÊ: reduzir impactos. DETALHE: [INDICADOR] em [PRAZO].</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABELAS INCLUÍDAS DO SEU CONTEÚDO -->
+        <div class="card small">
+          <h3>Mapeamento prático para a C5</h3>
+          <p>Referências rápidas de agentes e meios para compor “QUEM” e “COMO” na proposta de intervenção.</p>
+        </div>
+
+        <div class="table-wrap" style="margin:12px 0">
+          <table aria-describedby="tabela1-desc">
+            <caption>Tabela 1 — “Quem (agente)” por poder/esfera</caption>
+            <thead>
+              <tr>
+                <th style="width:22%">Agente</th>
+                <th style="width:18%">Exemplo</th>
+                <th style="width:28%">Função no ecossistema</th>
+                <th>Ações típicas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mídia</strong> (inclui checagem de fatos)</td>
+                <td><strong>Imprensa</strong></td>
+                <td>Informação e pressão pública</td>
+                <td>Campanhas educativas, jornalismo de dados, verificação de fatos, séries especiais</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="tabela1-desc" class="small muted">Tabela exemplificativa com linha de Mídia conforme conteúdo fornecido.</p>
+        </div>
+
+        <div class="table-wrap" style="margin:12px 0">
+          <table aria-describedby="tabela2-desc">
+            <caption>Tabela 2 — “Como (meio)” por poder/esfera</caption>
+            <thead>
+              <tr>
+                <th style="width:28%">Poder/Esfera</th>
+                <th>Meios típicos válidos para a conclusão</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Executivo</strong> (União/Estados/Municípios)</td>
+                <td>planos, programas, <strong>decretos/portarias</strong>, diretrizes, <strong>editais/convênios</strong>, transferências de recursos, <strong>campanhas</strong>, capacitações, <strong>licitações</strong>, obras e serviços, fiscalização via agências/secretarias</td>
+              </tr>
+              <tr>
+                <td><strong>Legislativo</strong></td>
+                <td><strong>leis</strong> e emendas, leis complementares, <strong>PPA/LDO/LOA</strong> (orçamento), audiências públicas, frentes parlamentares, <strong>fiscalização</strong> do Executivo, pedidos de informação</td>
+              </tr>
+              <tr>
+                <td><strong>Judiciário</strong></td>
+                <td>decisões, liminares, sentenças, acordos, execuções obrigando implementação, definição de prazos, multas por descumprimento</td>
+              </tr>
+              <tr>
+                <td><strong>Sistema de Justiça</strong> (MP e Defensoria)</td>
+                <td><strong>ação civil pública</strong>, recomendações, TAC, mutirões de atendimento, educação em direitos, litígio estratégico</td>
+              </tr>
+              <tr>
+                <td><strong>Sociedade civil/ONGs</strong></td>
+                <td>projetos de base comunitária, campanhas, monitoramento, conselhos de políticas públicas, relatórios-sombra</td>
+              </tr>
+              <tr>
+                <td><strong>Empresas</strong></td>
+                <td>PPPs, inovação tecnológica, soluções logísticas, cofinanciamento, certificações e metas ESG</td>
+              </tr>
+              <tr>
+                <td><strong>Mídia</strong></td>
+                <td>campanhas educativas, séries jornalísticas, verificação de fatos, parcerias com escolas/universidades</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="tabela2-desc" class="small muted">Relação de meios por poder/esfera para orientar o “COMO” na C5.</p>
+        </div>
+
       </div>
     </details>
 
@@ -848,7 +871,6 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <p><a class="btn" href="https://chatgpt.com/g/g-TjHOqVCkC-sofia-corretora-do-profinho-enem-v1-2" target="_blank" rel="noopener">Abrir avaliador (beta)</a></p>
       </div>
 
-      <!-- 11.1 -->
       <details class="map" id="exemplo-ia-bloco">
         <summary>
           <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -857,39 +879,21 @@ Medida 2 — <b>QUEM</b>: unidade local (<b>[AMBIENTE/SETOR]</b>). <b>O QUÊ</b>
         <div class="map-inner">
           <div class="card" style="background:#fffbeb;border-color:#fde68a">
             <p><strong>Aqui está um texto feito com IA</strong>; baseado somente no conteúdo desta página e atualizado com o exemplo de adaptação climática que você pediu.</p>
-            <p class="small muted">
-              Linhas do exemplo: <b><span id="linhas-total">–</span>/30</b> (incluindo vazias) •
-              <b><span id="linhas-sem-vazias">–</span>/30</b> (desconsiderando vazias).
-            </p>
+            <p class="small muted"> Linhas do exemplo: <b><span id="linhas-total">–</span>/30</b> (incluindo vazias) • <b><span id="linhas-sem-vazias">–</span>/30</b> (desconsiderando vazias). </p>
           </div>
-
-<pre id="exemplo-ia-texto"><code>À luz do art. 225 da Constituição, que assegura o direito ao meio ambiente equilibrado, e da Lei 12.608/2012, observa-se a dificuldade crônica de cidades brasileiras, grandes e pequenas, em proteger a população diante de eventos climáticos extremos. Sem planejamento urbano e orçamentário, “a chuva tem CEP”: alaga sempre nos mesmos bairros, sobretudo os de baixa renda. As enchentes recorrentes no Rio Grande do Sul, com perdas humanas e econômicas registradas por órgãos oficiais em 2025, expõem a relação entre ocupação precária do solo, desmatamento regional e gestão de risco insuficiente. Diante disso, defende-se que o enfrentamento exige planejamento multiescalar e execução orçamentária continuada.
-
-Em primeiro lugar, a vulnerabilidade social potencializa o desastre. Segundo o IBGE (2023), 27,4% dos brasileiros vivem abaixo da linha de pobreza e 4,4% em extrema pobreza, o que empurra famílias para encostas, margens de rios e áreas sem infraestrutura. Nesses territórios, a combinação de moradias autoconstruídas e drenagem deficiente transforma chuvas intensas em tragédias previsíveis. Por isso, a Lei 12.608 determina ações de prevenção e mitigação articuladas ao planejamento urbano, enquanto o art. 165 obriga a traduzir essas prioridades em PPA, LDO e LOA, sob pena de ficarem no discurso.
-
-Além disso, a degradação ambiental amplia extremos hidrológicos nas bacias. Séries históricas de INPE/PRODES e MapBiomas indicam pressão do desmatamento na Amazônia e no Cerrado, com reflexos no regime de chuvas e na erosão, que agravam enchentes a jusante. Sem um Plano Municipal de Redução de Riscos e Plano de Contingência que integrem mapeamento de áreas suscetíveis, manutenção de drenagem e infraestrutura verde-azul (parques de inundação, recuperação de margens, permeabilidade do solo), a resposta fica reativa e cara.
-
-Portanto, para cumprir o art. 225 e operacionalizar a Lei 12.608, as prefeituras devem: instituir PMRR e Plano de Contingência com metas na LDO e dotações na LOA (art. 165); executar obras de drenagem sustentável e infraestrutura verde-azul, priorizando bairros de baixa renda; implementar reassentamento assistido com aluguel social e HIS para famílias em Zonas de Risco Muito Alto; e publicar monitoramento semestral de indicadores de risco e perdas. Sob coordenação da Defesa Civil municipal, com apoio dos governos estadual e federal, a medida reduz em X% a população exposta e encurta o tempo de alagamento em pontos críticos, convertendo lei e orçamento em proteção concreta.</code></pre>
+          <pre id="exemplo-ia-texto"><code>À luz do art. 225 da Constituição, que assegura o direito ao meio ambiente equilibrado, e da Lei 12.608/2012, observa-se a dificuldade crônica de cidades brasileiras, grandes e pequenas, em proteger a população diante de eventos climáticos extremos. Sem planejamento urbano e orçamentário, “a chuva tem CEP”: alaga sempre nos mesmos bairros, sobretudo os de baixa renda. As enchentes recorrentes no Rio Grande do Sul, com perdas humanas e econômicas registradas por órgãos oficiais em 2025, expõem a relação entre ocupação precária do solo, desmatamento regional e gestão de risco insuficiente. Diante disso, defende-se que o enfrentamento exige planejamento multiescalar e execução orçamentária continuada. Em primeiro lugar, a vulnerabilidade social potencializa o desastre. Segundo o IBGE (2023), 27,4% dos brasileiros vivem abaixo da linha de pobreza e 4,4% em extrema pobreza, o que empurra famílias para encostas, margens de rios e áreas sem infraestrutura. Nesses territórios, a combinação de moradias autoconstruídas e drenagem deficiente transforma chuvas intensas em tragédias previsíveis. Por isso, a Lei 12.608 determina ações de prevenção e mitigação articuladas ao planejamento urbano, enquanto o art. 165 obriga a traduzir essas prioridades em PPA, LDO e LOA, sob pena de ficarem no discurso. Além disso, a degradação ambiental amplia extremos hidrológicos nas bacias. Séries históricas de INPE/PRODES e MapBiomas indicam pressão do desmatamento na Amazônia e no Cerrado, com reflexos no regime de chuvas e na erosão, que agravam enchentes a jusante. Sem um Plano Municipal de Redução de Riscos e Plano de Contingência que integrem mapeamento de áreas suscetíveis, manutenção de drenagem e infraestrutura verde-azul (parques de inundação, recuperação de margens, permeabilidade do solo), a resposta fica reativa e cara. Portanto, para cumprir o art. 225 e operacionalizar a Lei 12.608, as prefeituras devem: instituir PMRR e Plano de Contingência com metas na LDO e dotações na LOA (art. 165); executar obras de drenagem sustentável e infraestrutura verde-azul, priorizando bairros de baixa renda; implementar reassentamento assistido com aluguel social e HIS para famílias em Zonas de Risco Muito Alto; e publicar monitoramento semestral de indicadores de risco e perdas. Sob coordenação da Defesa Civil municipal, com apoio dos governos estadual e federal, a medida reduz em X% a população exposta e encurta o tempo de alagamento em pontos críticos, convertendo lei e orçamento em proteção concreta.</code></pre>
         </div>
       </details>
 
-      <!-- 11.2 -->
       <details class="map" id="redacao-usuario">
         <summary>
           <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           11.2) Redação que eu fiz e o chatgpt somente avaliou em 960
         </summary>
         <div class="map-inner">
-<pre><code> À luz da CF/88 (art. 225) e da Lei 12.608, é inquietante a dificuldade das pequenas e grandes cidades em manter o ambiente equilibrado e protegido diante dos eventos climáticos extremos. Diante desse recorte, pode-se dizer que, sem planejamento, a chuva tem CEP, o que a coloca, de forma crescente, no país, entre os eventos climáticos com maior vinculação a desastres no espaço urbano. Por conseguinte, conforme dispõem a Constituição e a Lei, juntamente com dados socioeconômicos e ambientais, a má qualidade da infraestrutura das casas nas cidades e o desmatamento no país agravam tais empecilhos. Sob esse prisma, examina-se o perfil social ligado às moradias e às áreas de risco, juntamente com as alterações climáticas provocadas por ações humanas.
-
-Em primeira análise, as áreas urbanas de maior risco enquadram moradores que, muitas vezes, estão categorizados em um baixo perfil socioeconômico. Segundo o IBGE (Síntese de Indicadores Sociais 2024), mais de 27% da população vive na pobreza e 4,4% em extrema pobreza. Diante desse quadro, é totalmente lógico deduzir que obter uma residência envolve poder financeiro, o que leva a refletir: pessoas com menores aquisições econômicas colocam suas vidas em risco em prol de sua sobrevivência, com projetos de engenharia pífios e com falhas, em que variados eventos climáticos causam danos estruturais e agravam problemas urbanos. Com isso, é crucial alinhar norma e orçamento; a vida cotidiana confirma a urgência, o que exige mais integridade no orçamento municipal da Defesa Civil, a fim de garantir proteção ao cidadão, conforme a Lei 12.608.
-
-Em segunda análise, eventos extremos podem ser causados ou atenuados por alterações de grandes áreas. Dados do PRADES 2024 destacam que mais de 30% da Amazônia e mais de 25% do Cerrado foram desmatados neste ano, o que representa um grande agravamento das causas de acontecimentos climáticos extremos nas cidades. Uma vez que a frequência desses fenômenos naturais aumenta, a ocorrência de problemas urbanos também aumenta. Dessarte, a pressão de exercer seus direitos básicos previstos pela Constituição é de extrema relevância — a solução exige mediações frágeis no plano de contingência para o impacto ambiental provocado por ações humanas.
-
-Diante do exposto, a persistência da dificuldade urbana em adaptar-se às atividades climáticas extremas resulta de falhas na execução e medições frágeis. Por isso, é importante que a prefeitura de cada município inclua meta na LDO e dotação na LOA, devendo aplicar a Lei 12.608 em conjunto com a CF/88 (art. 165), com edital anual para entrega contínua da defesa social, que atinja principalmente moradores de baixa renda e áreas de risco. Além do mais, cabe também ao governo federal criar planos de contingência de modo a diminuir ações ilegais no espaço florestal, incluindo o projeto conforme a Constituição, art. 165, e publicar o monitoramento semestral, o que deve se alinhar à proteção urbana relacionada aos eventos climáticos. Ao cabo, lei, orçamento e gente caminham juntos — e o direito sai do papel. </code></pre>
+          <pre><code> À luz da CF/88 (art. 225) e da Lei 12.608, é inquietante a dificuldade das pequenas e grandes cidades em manter o ambiente equilibrado e protegido diante dos eventos climáticos extremos. Diante desse recorte, pode-se dizer que, sem planejamento, a chuva tem CEP, o que a coloca, de forma crescente, no país, entre os eventos climáticos com maior vinculação a desastres no espaço urbano. Por conseguinte, conforme dispõem a Constituição e a Lei, juntamente com dados socioeconômicos e ambientais, a má qualidade da infraestrutura das casas nas cidades e o desmatamento no país agravam tais empecilhos. Sob esse prisma, examina-se o perfil social ligado às moradias e às áreas de risco, juntamente com as alterações climáticas provocadas por ações humanas. Em primeira análise, as áreas urbanas de maior risco enquadram moradores que, muitas vezes, estão categorizados em um baixo perfil socioeconômico. Segundo o IBGE (Síntese de Indicadores Sociais 2024), mais de 27% da população vive na pobreza e 4,4% em extrema pobreza. Diante desse quadro, é totalmente lógico deduzir que obter uma residência envolve poder financeiro, o que leva a refletir: pessoas com menores aquisições econômicas colocam suas vidas em risco em prol de sua sobrevivência, com projetos de engenharia pífios e com falhas, em que variados eventos climáticos causam danos estruturais e agravam problemas urbanos. Com isso, é crucial alinhar norma e orçamento; a vida cotidiana confirma a urgência, o que exige mais integridade no orçamento municipal da Defesa Civil, a fim de garantir proteção ao cidadão, conforme a Lei 12.608. Em segunda análise, eventos extremos podem ser causados ou atenuados por alterações de grandes áreas. Dados do PRADES 2024 destacam que mais de 30% da Amazônia e mais de 25% do Cerrado foram desmatados neste ano, o que representa um grande agravamento das causas de acontecimentos climáticos extremos nas cidades. Uma vez que a frequência desses fenômenos naturais aumenta, a ocorrência de problemas urbanos também aumenta. Dessarte, a pressão de exercer seus direitos básicos previstos pela Constituição é de extrema relevância — a solução exige mediações frágeis no plano de contingência para o impacto ambiental provocado por ações humanas. Diante do exposto, a persistência da dificuldade urbana em adaptar-se às atividades climáticas extremas resulta de falhas na execução e medições frágeis. Por isso, é importante que a prefeitura de cada município inclua meta na LDO e dotação na LOA, devendo aplicar a Lei 12.608 em conjunto com a CF/88 (art. 165), com edital anual para entrega contínua da defesa social, que atinja principalmente moradores de baixa renda e áreas de risco. Além do mais, cabe também ao governo federal criar planos de contingência de modo a diminuir ações ilegais no espaço florestal, incluindo o projeto conforme a Constituição, art. 165, e publicar o monitoramento semestral, o que deve se alinhar à proteção urbana relacionada aos eventos climáticos. Ao cabo, lei, orçamento e gente caminham juntos — e o direito sai do papel. </code></pre>
         </div>
       </details>
-
     </div>
 
     <p class="muted small" style="margin-top:16px">© v4.7 — Guia didático completo + referências coringas. Exporte: <span class="chip">Ctrl/Cmd + P</span> → “Salvar como PDF”.</p>
@@ -918,7 +922,7 @@ Diante do exposto, a persistência da dificuldade urbana em adaptar-se às ativi
       if (non) non.textContent = nonEmpty.length;
     })();
 
-    // Abre automaticamente os <details> 8.1 e 8.2 ao acessar pelos links do sumário
+    // Abre automaticamente os <details> ao acessar pelos links do sumário
     (function () {
       function openDetailsFromHash(){
         const id = location.hash && location.hash.slice(1);
@@ -932,3 +936,6 @@ Diante do exposto, a persistência da dificuldade urbana em adaptar-se às ativi
   </script>
 </body>
 </html>
+```
+
+Se algo mais do seu conteúdo fantasma aparecer de novo em fragmentos tipo “<tr perdido no limbo>”, manda que eu encaixo sem arrancar mais nada. Não vou repetir a cirurgia sem anestesia.
